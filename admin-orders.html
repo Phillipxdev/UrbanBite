@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Orders | UrbanBite Admin</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Admin CSS -->
+    <link rel="stylesheet" href="admin.css">
+
+</head>
+
+<body>
+
+
+<div class="admin-layout">
+
+
+    <!-- ==========================================
+         SIDEBAR
+    =========================================== -->
+
+    <aside class="sidebar">
+
+        <a
+            href="admin.html"
+            class="admin-logo"
+        >
+            Urban<span>Bite.</span>
+        </a>
+
+
+        <p class="sidebar-label">
+            ADMIN PANEL
+        </p>
+
+
+        <nav class="admin-nav">
+
+            <a href="admin.html">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                Dashboard
+
+            </a>
+
+
+            <a href="admin-products.html">
+
+                <i class="fa-solid fa-burger"></i>
+
+                Products
+
+            </a>
+
+
+            <a
+                href="admin-orders.html"
+                class="active"
+            >
+
+                <i class="fa-solid fa-receipt"></i>
+
+                Orders
+
+            </a>
+
+
+            <a href="admin-customers.html">
+
+                <i class="fa-solid fa-users"></i>
+
+                Customers
+
+            </a>
+
+
+            <a href="index.html">
+
+                <i class="fa-solid fa-store"></i>
+
+                View Store
+
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- ==========================================
+         MAIN
+    =========================================== -->
+
+    <main class="admin-main">
+
+
+        <!-- ======================================
+             HEADER
+        ======================================= -->
+
+        <header class="admin-header">
+
+            <div>
+
+                <p>ADMIN</p>
+
+                <h1>
+                    Orders
+                </h1>
+
+            </div>
+
+
+            <div class="admin-profile">
+
+                <div class="admin-avatar">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Administrator
+                    </strong>
+
+                    <span>
+                        UrbanBite Admin
+                    </span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ======================================
+             ORDER STATISTICS
+        ======================================= -->
+
+        <section class="dashboard-cards">
+
+
+            <!-- TOTAL ORDERS -->
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-icon">
+
+                    <i class="fa-solid fa-receipt"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Total Orders
+                    </span>
+
+                    <strong id="totalOrders">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PENDING -->
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-icon">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Pending
+                    </span>
+
+                    <strong id="pendingOrders">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- COMPLETED -->
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-icon">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Completed
+                    </span>
+
+                    <strong id="completedOrders">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             ORDER MANAGEMENT
+        ======================================= -->
+
+        <section class="quick-section">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span>
+                        ORDER MANAGEMENT
+                    </span>
+
+                    <h2>
+                        Customer Orders
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==================================
+                 SEARCH / FILTER
+            =================================== -->
+
+            <div class="admin-order-tools">
+
+
+                <div class="admin-order-search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="search"
+                        id="orderSearch"
+                        placeholder="Search order, customer or email..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <select id="orderStatusFilter">
+
+                    <option value="all">
+                        All Orders
+                    </option>
+
+                    <option value="pending">
+                        Pending
+                    </option>
+
+                    <option value="preparing">
+                        Preparing
+                    </option>
+
+                    <option value="out-for-delivery">
+                        Out for Delivery
+                    </option>
+
+                    <option value="completed">
+                        Completed
+                    </option>
+
+                    <option value="cancelled">
+                        Cancelled
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- ==================================
+                 ORDERS TABLE
+            =================================== -->
+
+            <div class="admin-orders-table-wrapper">
+
+                <table class="admin-orders-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Order
+                            </th>
+
+                            <th>
+                                Customer
+                            </th>
+
+                            <th>
+                                Date
+                            </th>
+
+                            <th>
+                                Items
+                            </th>
+
+                            <th>
+                                Total
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="ordersTableBody">
+
+                        <!--
+                            Orders will be generated
+                            by admin-orders.js
+                        -->
+
+                    </tbody>
+
+                </table>
+
+
+                <!-- EMPTY STATE -->
+
+                <div
+                    class="admin-empty-orders"
+                    id="emptyOrders"
+                    hidden
+                >
+
+                    <i class="fa-solid fa-receipt"></i>
+
+                    <h3>
+                        No Orders Yet
+                    </h3>
+
+                    <p>
+                        Customer orders will appear here
+                        after an order is placed.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+<!-- ==========================================
+     ORDER DETAILS MODAL
+=========================================== -->
+
+<div
+    class="admin-order-modal"
+    id="orderModal"
+    aria-hidden="true"
+>
+
+
+    <div
+        class="admin-order-modal-overlay"
+        id="orderModalOverlay"
+    ></div>
+
+
+    <div class="admin-order-modal-content">
+
+
+        <!-- MODAL HEADER -->
+
+        <div class="admin-order-modal-header">
+
+            <div>
+
+                <span>
+                    ORDER DETAILS
+                </span>
+
+                <h2 id="modalOrderNumber">
+                    Order
+                </h2>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="closeOrderModal"
+                aria-label="Close order"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- CUSTOMER -->
+
+        <div class="admin-order-detail-section">
+
+            <h3>
+                Customer
+            </h3>
+
+
+            <div class="admin-order-customer">
+
+                <div>
+
+                    <span>Name</span>
+
+                    <strong id="modalCustomerName">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>Email</span>
+
+                    <strong id="modalCustomerEmail">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>Phone</span>
+
+                    <strong id="modalCustomerPhone">
+                        -
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- DELIVERY -->
+
+        <div class="admin-order-detail-section">
+
+            <h3>
+                Delivery Information
+            </h3>
+
+            <p id="modalDeliveryAddress">
+                -
+            </p>
+
+        </div>
+
+
+
+        <!-- ITEMS -->
+
+        <div class="admin-order-detail-section">
+
+            <h3>
+                Order Items
+            </h3>
+
+            <div id="modalOrderItems">
+
+                <!-- Generated with JS -->
+
+            </div>
+
+        </div>
+
+
+
+        <!-- TOTAL -->
+
+        <div class="admin-order-total">
+
+            <span>
+                Order Total
+            </span>
+
+            <strong id="modalOrderTotal">
+                R0.00
+            </strong>
+
+        </div>
+
+
+
+        <!-- STATUS -->
+
+        <div class="admin-order-status-control">
+
+            <label for="modalOrderStatus">
+                Order Status
+            </label>
+
+
+            <select id="modalOrderStatus">
+
+                <option value="pending">
+                    Pending
+                </option>
+
+                <option value="preparing">
+                    Preparing
+                </option>
+
+                <option value="out-for-delivery">
+                    Out for Delivery
+                </option>
+
+                <option value="completed">
+                    Completed
+                </option>
+
+                <option value="cancelled">
+                    Cancelled
+                </option>
+
+            </select>
+
+
+            <button
+                type="button"
+                id="saveOrderStatus"
+            >
+
+                <i class="fa-solid fa-floppy-disk"></i>
+
+                Update Status
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- ==========================================
+     JAVASCRIPT
+=========================================== -->
+
+<script src="admin-orders.js"></script>
+
+
+</body>
+
+</html>

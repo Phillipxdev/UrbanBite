@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | UrbanBite</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="checkout.css">
+</head>
+
+<body>
+
+    <!-- ==========================================
+         HEADER
+    =========================================== -->
+
+    <header class="header">
+
+        <div class="container navbar">
+
+            <a href="index.html" class="logo">
+                Urban<span>Bite.</span>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="index.html" class="nav-link">
+                    Home
+                </a>
+
+                <a href="index.html#menu" class="nav-link">
+                    Menu
+                </a>
+
+                <a href="index.html#about" class="nav-link">
+                    About
+                </a>
+
+                <a href="index.html#offers" class="nav-link">
+                    Offers
+                </a>
+
+                <a href="index.html#contact" class="nav-link">
+                    Contact
+                </a>
+
+            </nav>
+
+            <div class="nav-actions">
+
+                <a
+                    href="cart.html"
+                    class="cart-btn"
+                    aria-label="Shopping cart"
+                >
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <span
+                        class="cart-count"
+                        id="cartCount"
+                    >
+                        0
+                    </span>
+                </a>
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open menu"
+                    type="button"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==========================================
+         CHECKOUT
+    =========================================== -->
+
+    <main class="checkout-page">
+
+        <!-- Page heading -->
+
+        <section class="checkout-hero">
+
+            <div class="container">
+
+                <div class="breadcrumb">
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                    <a href="cart.html">
+                        Cart
+                    </a>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                    <span>
+                        Checkout
+                    </span>
+
+                </div>
+
+                <span class="section-label">
+                    COMPLETE YOUR ORDER
+                </span>
+
+                <h1>
+                    Checkout
+                </h1>
+
+                <p>
+                    Enter your delivery details and choose
+                    how you'd like to pay.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CHECKOUT CONTENT
+        =========================================== -->
+
+        <section class="checkout-section">
+
+            <div class="container checkout-layout">
+
+
+                <!-- ==================================
+                     LEFT SIDE
+                =================================== -->
+
+                <form
+                    class="checkout-form"
+                    id="checkoutForm"
+                >
+
+                    <!-- ==============================
+                         CONTACT DETAILS
+                    =============================== -->
+
+                    <div class="checkout-card">
+
+                        <div class="checkout-card-header">
+
+                            <div class="checkout-number">
+                                1
+                            </div>
+
+                            <div>
+                                <h2>
+                                    Contact Details
+                                </h2>
+
+                                <p>
+                                    We'll use these details
+                                    for your order.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label for="firstName">
+                                    First Name
+                                </label>
+
+                                <div class="input-box">
+
+                                    <i class="fa-regular fa-user"></i>
+
+                                    <input
+                                        type="text"
+                                        id="firstName"
+                                        name="firstName"
+                                        placeholder="Your first name"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="lastName">
+                                    Last Name
+                                </label>
+
+                                <div class="input-box">
+
+                                    <i class="fa-regular fa-user"></i>
+
+                                    <input
+                                        type="text"
+                                        id="lastName"
+                                        name="lastName"
+                                        placeholder="Your last name"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    Email Address
+                                </label>
+
+                                <div class="input-box">
+
+                                    <i class="fa-regular fa-envelope"></i>
+
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        placeholder="name@example.com"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="phone">
+                                    Phone Number
+                                </label>
+
+                                <div class="input-box">
+
+                                    <i class="fa-solid fa-phone"></i>
+
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        placeholder="e.g. 071 234 5678"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ==============================
+                         DELIVERY ADDRESS
+                    =============================== -->
+
+                    <div class="checkout-card">
+
+                        <div class="checkout-card-header">
+
+                            <div class="checkout-number">
+                                2
+                            </div>
+
+                            <div>
+                                <h2>
+                                    Delivery Address
+                                </h2>
+
+                                <p>
+                                    Where should we deliver
+                                    your food?
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+                            <div class="form-group full-width">
+
+                                <label for="address">
+                                    Street Address
+                                </label>
+
+                                <div class="input-box">
+
+                                    <i class="fa-solid fa-location-dot"></i>
+
+                                    <input
+                                        type="text"
+                                        id="address"
+                                        name="address"
+                                        placeholder="Street address"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="suburb">
+                                    Suburb
+                                </label>
+
+                                <div class="input-box">
+
+                                    <i class="fa-solid fa-map-pin"></i>
+
+                                    <input
+                                        type="text"
+                                        id="suburb"
+                                        name="suburb"
+                                        placeholder="Your suburb"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="city">
+                                    City
+                                </label>
+
+                                <div class="input-box">
+
+                                    <i class="fa-solid fa-city"></i>
+
+                                    <input
+                                        type="text"
+                                        id="city"
+                                        name="city"
+                                        placeholder="City"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="province">
+                                    Province
+                                </label>
+
+                                <div class="input-box">
+
+                                    <i class="fa-solid fa-map"></i>
+
+                                    <select
+                                        id="province"
+                                        name="province"
+                                        required
+                                    >
+
+                                        <option value="">
+                                            Select province
+                                        </option>
+
+                                        <option value="KwaZulu-Natal">
+                                            KwaZulu-Natal
+                                        </option>
+
+                                        <option value="Gauteng">
+                                            Gauteng
+                                        </option>
+
+                                        <option value="Western Cape">
+                                            Western Cape
+                                        </option>
+
+                                        <option value="Eastern Cape">
+                                            Eastern Cape
+                                        </option>
+
+                                        <option value="Free State">
+                                            Free State
+                                        </option>
+
+                                        <option value="Limpopo">
+                                            Limpopo
+                                        </option>
+
+                                        <option value="Mpumalanga">
+                                            Mpumalanga
+                                        </option>
+
+                                        <option value="North West">
+                                            North West
+                                        </option>
+
+                                        <option value="Northern Cape">
+                                            Northern Cape
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="postalCode">
+                                    Postal Code
+                                </label>
+
+                                <div class="input-box">
+
+                                    <i class="fa-solid fa-location-crosshairs"></i>
+
+                                    <input
+                                        type="text"
+                                        id="postalCode"
+                                        name="postalCode"
+                                        placeholder="Postal code"
+                                        maxlength="4"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group full-width">
+
+                                <label for="instructions">
+                                    Delivery Instructions
+                                    <span>(Optional)</span>
+                                </label>
+
+                                <textarea
+                                    id="instructions"
+                                    name="instructions"
+                                    rows="4"
+                                    placeholder="Gate number, apartment number, delivery instructions..."
+                                ></textarea>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ==============================
+                         DELIVERY METHOD
+                    =============================== -->
+
+                    <div class="checkout-card">
+
+                        <div class="checkout-card-header">
+
+                            <div class="checkout-number">
+                                3
+                            </div>
+
+                            <div>
+                                <h2>
+                                    Delivery Method
+                                </h2>
+
+                                <p>
+                                    Choose how quickly you'd
+                                    like your food.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="delivery-options">
+
+                            <label class="delivery-option active">
+
+                                <input
+                                    type="radio"
+                                    name="deliveryMethod"
+                                    value="standard"
+                                    checked
+                                >
+
+                                <div class="delivery-radio"></div>
+
+                                <div class="delivery-option-icon">
+
+                                    <i class="fa-solid fa-motorcycle"></i>
+
+                                </div>
+
+                                <div class="delivery-option-info">
+
+                                    <strong>
+                                        Standard Delivery
+                                    </strong>
+
+                                    <span>
+                                        Estimated 25 - 35 minutes
+                                    </span>
+
+                                </div>
+
+                                <strong class="delivery-price">
+                                    R35
+                                </strong>
+
+                            </label>
+
+
+                            <label class="delivery-option">
+
+                                <input
+                                    type="radio"
+                                    name="deliveryMethod"
+                                    value="pickup"
+                                >
+
+                                <div class="delivery-radio"></div>
+
+                                <div class="delivery-option-icon">
+
+                                    <i class="fa-solid fa-store"></i>
+
+                                </div>
+
+                                <div class="delivery-option-info">
+
+                                    <strong>
+                                        Restaurant Pickup
+                                    </strong>
+
+                                    <span>
+                                        Ready in approximately 20 minutes
+                                    </span>
+
+                                </div>
+
+                                <strong class="delivery-price free">
+                                    FREE
+                                </strong>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ==============================
+                         PAYMENT METHOD
+                    =============================== -->
+
+                    <div class="checkout-card">
+
+                        <div class="checkout-card-header">
+
+                            <div class="checkout-number">
+                                4
+                            </div>
+
+                            <div>
+                                <h2>
+                                    Payment Method
+                                </h2>
+
+                                <p>
+                                    Choose your preferred
+                                    payment option.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="payment-options">
+
+
+                            <!-- Card -->
+
+                            <label class="payment-option active">
+
+                                <input
+                                    type="radio"
+                                    name="paymentMethod"
+                                    value="card"
+                                    checked
+                                >
+
+                                <div class="payment-radio"></div>
+
+                                <div class="payment-option-icon">
+
+                                    <i class="fa-regular fa-credit-card"></i>
+
+                                </div>
+
+                                <div class="payment-option-info">
+
+                                    <strong>
+                                        Credit / Debit Card
+                                    </strong>
+
+                                    <span>
+                                        Visa or Mastercard
+                                    </span>
+
+                                </div>
+
+                                <div class="checkout-payment-icons">
+
+                                    <i class="fa-brands fa-cc-visa"></i>
+
+                                    <i class="fa-brands fa-cc-mastercard"></i>
+
+                                </div>
+
+                            </label>
+
+
+                            <!-- Cash -->
+
+                            <label class="payment-option">
+
+                                <input
+                                    type="radio"
+                                    name="paymentMethod"
+                                    value="cash"
+                                >
+
+                                <div class="payment-radio"></div>
+
+                                <div class="payment-option-icon">
+
+                                    <i class="fa-solid fa-money-bill-wave"></i>
+
+                                </div>
+
+                                <div class="payment-option-info">
+
+                                    <strong>
+                                        Cash on Delivery
+                                    </strong>
+
+                                    <span>
+                                        Pay when your food arrives
+                                    </span>
+
+                                </div>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- Card details -->
+
+                        <div
+                            class="card-details"
+                            id="cardDetails"
+                        >
+
+                            <div class="form-grid">
+
+                                <div class="form-group full-width">
+
+                                    <label for="cardName">
+                                        Name on Card
+                                    </label>
+
+                                    <div class="input-box">
+
+                                        <i class="fa-regular fa-user"></i>
+
+                                        <input
+                                            type="text"
+                                            id="cardName"
+                                            name="cardName"
+                                            placeholder="Name shown on card"
+                                        >
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-group full-width">
+
+                                    <label for="cardNumber">
+                                        Card Number
+                                    </label>
+
+                                    <div class="input-box">
+
+                                        <i class="fa-regular fa-credit-card"></i>
+
+                                        <input
+                                            type="text"
+                                            id="cardNumber"
+                                            name="cardNumber"
+                                            placeholder="1234 5678 9012 3456"
+                                            maxlength="19"
+                                            inputmode="numeric"
+                                        >
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="expiry">
+                                        Expiry Date
+                                    </label>
+
+                                    <div class="input-box">
+
+                                        <i class="fa-regular fa-calendar"></i>
+
+                                        <input
+                                            type="text"
+                                            id="expiry"
+                                            name="expiry"
+                                            placeholder="MM/YY"
+                                            maxlength="5"
+                                            inputmode="numeric"
+                                        >
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="cvv">
+                                        CVV
+                                    </label>
+
+                                    <div class="input-box">
+
+                                        <i class="fa-solid fa-lock"></i>
+
+                                        <input
+                                            type="password"
+                                            id="cvv"
+                                            name="cvv"
+                                            placeholder="123"
+                                            maxlength="4"
+                                            inputmode="numeric"
+                                        >
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="payment-security">
+
+                                <i class="fa-solid fa-shield-halved"></i>
+
+                                <span>
+                                    This demo does not process or store
+                                    real card payments.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+
+                <!-- ==================================
+                     RIGHT SIDE - ORDER SUMMARY
+                =================================== -->
+
+                <aside class="checkout-summary">
+
+                    <div class="checkout-summary-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                YOUR ORDER
+                            </span>
+
+                            <h2>
+                                Order Summary
+                            </h2>
+
+                        </div>
+
+                        <a href="cart.html">
+                            Edit
+                        </a>
+
+                    </div>
+
+
+                    <!-- Products generated by JS -->
+
+                    <div
+                        class="checkout-items"
+                        id="checkoutItems"
+                    ></div>
+
+
+                    <!-- Prices -->
+
+                    <div class="checkout-summary-prices">
+
+                        <div class="checkout-summary-row">
+
+                            <span>
+                                Subtotal
+                            </span>
+
+                            <strong id="checkoutSubtotal">
+                                R0.00
+                            </strong>
+
+                        </div>
+
+
+                        <div class="checkout-summary-row">
+
+                            <span>
+                                Delivery
+                            </span>
+
+                            <strong id="checkoutDelivery">
+                                R0.00
+                            </strong>
+
+                        </div>
+
+
+                        <div
+                            class="checkout-summary-row checkout-discount"
+                            id="checkoutDiscountRow"
+                        >
+
+                            <span>
+                                Discount
+                            </span>
+
+                            <strong id="checkoutDiscount">
+                                -R0.00
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="checkout-divider"></div>
+
+
+                    <!-- Total -->
+
+                    <div class="checkout-total">
+
+                        <div>
+
+                            <span>
+                                Total
+                            </span>
+
+                            <small>
+                                Amount to pay
+                            </small>
+
+                        </div>
+
+                        <strong id="checkoutTotal">
+                            R0.00
+                        </strong>
+
+                    </div>
+
+
+                    <!-- Place order -->
+
+                    <button
+                        class="place-order-btn"
+                        id="placeOrderBtn"
+                        type="submit"
+                        form="checkoutForm"
+                    >
+
+                        <span>
+                            Place Order
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                    <div class="checkout-secure">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <span>
+                            Secure checkout
+                        </span>
+
+                    </div>
+
+
+                    <p class="checkout-terms">
+                        By placing your order, you agree to
+                        UrbanBite's Terms & Conditions and
+                        Privacy Policy.
+                    </p>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================
+         ORDER SUCCESS MODAL
+    =========================================== -->
+
+    <div
+        class="order-success-modal"
+        id="orderSuccessModal"
+    >
+
+        <div class="order-success-content">
+
+            <div class="success-animation">
+
+                <i class="fa-solid fa-check"></i>
+
+            </div>
+
+            <span class="section-label">
+                ORDER CONFIRMED
+            </span>
+
+            <h2>
+                Your food is on the way!
+            </h2>
+
+            <p>
+                Thanks for ordering from UrbanBite.
+                We've received your order and will
+                start preparing it shortly.
+            </p>
+
+
+            <div class="order-number-box">
+
+                <span>
+                    Order Number
+                </span>
+
+                <strong id="orderNumber">
+                    #UB000000
+                </strong>
+
+            </div>
+
+
+            <div class="success-delivery-info">
+
+                <i class="fa-solid fa-motorcycle"></i>
+
+                <div>
+
+                    <span>
+                        Estimated Delivery
+                    </span>
+
+                    <strong>
+                        25 - 35 minutes
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="index.html"
+                class="btn btn-primary"
+                id="backHomeBtn"
+            >
+                Back to Home
+
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+
+                    <a
+                        href="index.html"
+                        class="logo"
+                    >
+                        Urban<span>Bite.</span>
+                    </a>
+
+                    <p>
+                        Fresh food, bold flavours and fast
+                        delivery. Your favourite meals are
+                        only a few clicks away.
+                    </p>
+
+                    <div class="social-links">
+
+                        <a href="#" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#" aria-label="TikTok">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+
+                        <a href="#" aria-label="X">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Quick Links
+                    </h4>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="index.html#menu">
+                        Menu
+                    </a>
+
+                    <a href="index.html#about">
+                        About Us
+                    </a>
+
+                    <a href="index.html#offers">
+                        Offers
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Help
+                    </h4>
+
+                    <a href="cart.html">
+                        My Cart
+                    </a>
+
+                    <a href="#">
+                        Track Order
+                    </a>
+
+                    <a href="#">
+                        FAQs
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Contact
+                    </h4>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Durban, South Africa
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        +27 31 000 0000
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        hello@urbanbite.co.za
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; 2026 UrbanBite.
+                    All rights reserved.
+                </p>
+
+                <div>
+
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#">
+                        Terms & Conditions
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Checkout JavaScript -->
+    <script src="checkout.js"></script>
+
+
+</body>
+</html>

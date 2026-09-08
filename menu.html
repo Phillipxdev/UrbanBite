@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Full Menu | UrbanBite</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
+</head>
+
+<body>
+
+    <!-- ==========================================
+         HEADER
+    =========================================== -->
+
+    <header class="header">
+
+        <div class="container navbar">
+
+            <a href="index.html" class="logo">
+                Urban<span>Bite.</span>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="index.html" class="nav-link">
+                    Home
+                </a>
+
+                <a href="menu.html" class="nav-link active">
+                    Menu
+                </a>
+
+                <a href="index.html#about" class="nav-link">
+                    About
+                </a>
+
+                <a href="index.html#offers" class="nav-link">
+                    Offers
+                </a>
+
+                <a href="index.html#contact" class="nav-link">
+                    Contact
+                </a>
+
+            </nav>
+
+            <div class="nav-actions">
+
+                <button
+                    class="nav-icon"
+                    id="menuSearchBtn"
+                    type="button"
+                    aria-label="Search menu"
+                >
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+                <button
+                    class="nav-icon"
+                    type="button"
+                    aria-label="Account"
+                >
+                    <i class="fa-regular fa-user"></i>
+                </button>
+
+                <a
+                    href="cart.html"
+                    class="cart-btn"
+                    aria-label="Shopping cart"
+                >
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <span
+                        class="cart-count"
+                        id="cartCount"
+                    >
+                        0
+                    </span>
+                </a>
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Open navigation"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main class="full-menu-page">
+
+        <!-- ==========================================
+             MENU HERO
+        =========================================== -->
+
+        <section class="menu-hero">
+
+            <div class="container">
+
+                <div class="breadcrumb">
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                    <span>
+                        Menu
+                    </span>
+
+                </div>
+
+                <span class="section-label">
+                    URBANBITE MENU
+                </span>
+
+                <h1>
+                    Find Your
+                    <span>Favourite Meal.</span>
+                </h1>
+
+                <p>
+                    From juicy burgers and cheesy pizzas to
+                    refreshing drinks and sweet desserts.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SEARCH & FILTER
+        =========================================== -->
+
+        <section class="menu-controls-section">
+
+            <div class="container">
+
+                <div class="menu-search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="search"
+                        id="menuSearchInput"
+                        placeholder="Search burgers, pizza, chicken..."
+                        autocomplete="off"
+                    >
+
+                    <button
+                        type="button"
+                        id="clearMenuSearch"
+                        aria-label="Clear search"
+                    >
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                </div>
+
+
+                <!-- Categories -->
+
+                <div class="menu-filter-row">
+
+                    <div class="menu-categories">
+
+                        <button
+                            class="menu-category active"
+                            data-category="all"
+                            type="button"
+                        >
+                            All
+                        </button>
+
+                        <button
+                            class="menu-category"
+                            data-category="burger"
+                            type="button"
+                        >
+                            🍔 Burgers
+                        </button>
+
+                        <button
+                            class="menu-category"
+                            data-category="pizza"
+                            type="button"
+                        >
+                            🍕 Pizza
+                        </button>
+
+                        <button
+                            class="menu-category"
+                            data-category="chicken"
+                            type="button"
+                        >
+                            🍗 Chicken
+                        </button>
+
+                        <button
+                            class="menu-category"
+                            data-category="drinks"
+                            type="button"
+                        >
+                            🥤 Drinks
+                        </button>
+
+                        <button
+                            class="menu-category"
+                            data-category="dessert"
+                            type="button"
+                        >
+                            🍰 Desserts
+                        </button>
+
+                    </div>
+
+
+                    <!-- Sort -->
+
+                    <div class="menu-sort">
+
+                        <i class="fa-solid fa-arrow-down-wide-short"></i>
+
+                        <select id="menuSort">
+
+                            <option value="default">
+                                Sort by
+                            </option>
+
+                            <option value="low">
+                                Price: Low to High
+                            </option>
+
+                            <option value="high">
+                                Price: High to Low
+                            </option>
+
+                            <option value="rating">
+                                Highest Rated
+                            </option>
+
+                            <option value="name">
+                                Name A-Z
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             FULL MENU
+        =========================================== -->
+
+        <section class="full-menu-section section">
+
+            <div class="container">
+
+                <div class="menu-results-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            FRESHLY PREPARED
+                        </span>
+
+                        <h2 id="menuTitle">
+                            All Meals
+                        </h2>
+
+                    </div>
+
+                    <p id="menuResultCount">
+                        12 meals
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="food-grid"
+                    id="fullMenuGrid"
+                >
+
+
+                    <!-- ==================================
+                         1. BEEF BURGER
+                    =================================== -->
+
+                    <article
+                        class="food-card menu-product"
+                        data-category="burger"
+                        data-price="89.99"
+                        data-rating="4.9"
+                        data-name="Classic Beef Burger"
+                    >
+
+                        <div class="food-image">
+
+                            <span class="food-badge">
+                                Popular
+                            </span>
+
+                            <button
+                                class="favorite-btn"
+                                type="button"
+                                aria-label="Add to favorites"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <img 
+                                src="beef burger.jpg"
+                                alt="Classic Beef Burger"
+                            >
+
+                        </div>
+
+                        <div class="food-content">
+
+                            <div class="food-rating">
+                                <i class="fa-solid fa-star"></i>
+                                4.9
+                                <span>(120)</span>
+                            </div>
+
+                            <h3>
+                                Classic Beef Burger
+                            </h3>
+
+                            <p>
+                                Beef patty, cheddar, lettuce,
+                                tomato and signature sauce.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <div class="food-price">
+                                    <span>R</span>89.99
+                                </div>
+
+                                <button
+                                    class="add-cart-btn"
+                                    data-id="1"
+                                    data-name="Classic Beef Burger"
+                                    data-price="89.99"
+                                    data-image="images/classic-burger.jpg"
+                                    type="button"
+                                >
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ==================================
+                         2. PEPPERONI PIZZA
+                    =================================== -->
+
+                    <article
+                        class="food-card menu-product"
+                        data-category="pizza"
+                        data-price="129.99"
+                        data-rating="4.8"
+                        data-name="Pepperoni Pizza"
+                    >
+
+                        <div class="food-image">
+
+                            <span class="food-badge">
+                                Best Seller
+                            </span>
+
+                            <button
+                                class="favorite-btn"
+                                type="button"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <img
+                                src="pepperoni pizza.jpg"
+                                alt="Pepperoni Pizza"
+                            >
+
+                        </div>
+
+                        <div class="food-content">
+
+                            <div class="food-rating">
+                                <i class="fa-solid fa-star"></i>
+                                4.8
+                                <span>(98)</span>
+                            </div>
+
+                            <h3>Pepperoni Pizza</h3>
+
+                            <p>
+                                Mozzarella, pepperoni,
+                                tomato sauce and Italian herbs.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <div class="food-price">
+                                    <span>R</span>129.99
+                                </div>
+
+                                <button
+                                    class="add-cart-btn"
+                                    data-id="2"
+                                    data-name="Pepperoni Pizza"
+                                    data-price="129.99"
+                                    data-image="images/pepperoni-pizza.jpg"
+                                    type="button"
+                                >
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ==================================
+                         3. GRILLED CHICKEN
+                    =================================== -->
+
+                    <article
+                        class="food-card menu-product"
+                        data-category="chicken"
+                        data-price="109.99"
+                        data-rating="4.7"
+                        data-name="Grilled Chicken"
+                    >
+
+                        <div class="food-image">
+
+                            <button
+                                class="favorite-btn"
+                                type="button"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <img
+                                src="whole-grilled-chicken.jpg"
+                                alt="Grilled Chicken"
+                            >
+
+                        </div>
+
+                        <div class="food-content">
+
+                            <div class="food-rating">
+                                <i class="fa-solid fa-star"></i>
+                                4.7
+                                <span>(86)</span>
+                            </div>
+
+                            <h3>Grilled Chicken</h3>
+
+                            <p>
+                                Flame-grilled chicken served with
+                                fries and fresh salad.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <div class="food-price">
+                                    <span>R</span>109.99
+                                </div>
+
+                                <button
+                                    class="add-cart-btn"
+                                    data-id="3"
+                                    data-name="Grilled Chicken"
+                                    data-price="109.99"
+                                    data-image="images/grilled-chicken.jpg"
+                                    type="button"
+                                >
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ==================================
+                         4. CRISPY CHICKEN BURGER
+                    =================================== -->
+
+                    <article
+                        class="food-card menu-product"
+                        data-category="burger"
+                        data-price="84.99"
+                        data-rating="4.9"
+                        data-name="Crispy Chicken Burger"
+                    >
+
+                        <div class="food-image">
+
+                            <span class="food-badge">
+                                New
+                            </span>
+
+                            <button
+                                class="favorite-btn"
+                                type="button"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <img
+                                src="burger.jpg"
+                                alt="Crispy Chicken Burger"
+                            >
+
+                        </div>
+
+                        <div class="food-content">
+
+                            <div class="food-rating">
+                                <i class="fa-solid fa-star"></i>
+                                4.9
+                                <span>(74)</span>
+                            </div>
+
+                            <h3>
+                                Crispy Chicken Burger
+                            </h3>
+
+                            <p>
+                                Crispy chicken, lettuce,
+                                pickles and creamy UrbanBite sauce.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <div class="food-price">
+                                    <span>R</span>84.99
+                                </div>
+
+                                <button
+                                    class="add-cart-btn"
+                                    data-id="4"
+                                    data-name="Crispy Chicken Burger"
+                                    data-price="84.99"
+                                    data-image="images/chicken-burger.jpg"
+                                    type="button"
+                                >
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ==================================
+                         5. BBQ BACON BURGER
+                    =================================== -->
+
+                    <article
+                        class="food-card menu-product"
+                        data-category="burger"
+                        data-price="104.99"
+                        data-rating="4.8"
+                        data-name="BBQ Bacon Burger"
+                    >
+
+                        <div class="food-image">
+
+                            <button
+                                class="favorite-btn"
+                                type="button"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <img
+                                src="BBQ-Bacon-Burgers-RCSQ.jpg"
+                                alt="BBQ Bacon Burger"
+                            >
+
+                        </div>
+
+                        <div class="food-content">
+
+                            <div class="food-rating">
+                                <i class="fa-solid fa-star"></i>
+                                4.8
+                                <span>(65)</span>
+                            </div>
+
+                            <h3>BBQ Bacon Burger</h3>
+
+                            <p>
+                                Beef patty, crispy bacon,
+                                cheddar and smoky BBQ sauce.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <div class="food-price">
+                                    <span>R</span>104.99
+                                </div>
+
+                                <button
+                                    class="add-cart-btn"
+                                    data-id="5"
+                                    data-name="BBQ Bacon Burger"
+                                    data-price="104.99"
+                                    data-image="images/bbq-burger.jpg"
+                                    type="button"
+                                >
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ==================================
+                         6. MARGHERITA PIZZA
+                    =================================== -->
+
+                    <article
+                        class="food-card menu-product"
+                        data-category="pizza"
+                        data-price="99.99"
+                        data-rating="4.6"
+                        data-name="Margherita Pizza"
+                    >
+
+                        <div class="food-image">
+
+                            <button
+                                class="favorite-btn"
+                                type="button"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <img
+                                src="margherita pizza.jpg"
+                                alt="Margherita Pizza"
+                            >
+
+                        </div>
+
+                        <div class="food-content">
+
+                            <div class="food-rating">
+                                <i class="fa-solid fa-star"></i>
+                                4.6
+                                <span>(58)</span>
+                            </div>
+
+                            <h3>Margherita Pizza</h3>
+
+                            <p>
+                                Mozzarella, tomato sauce,
+                                fresh basil and Italian herbs.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <div class="food-price">
+                                    <span>R</span>99.99
+                                </div>
+
+                                <button
+                                    class="add-cart-btn"
+                                    data-id="6"
+                                    data-name="Margherita Pizza"
+                                    data-price="99.99"
+                                    data-image="images/margherita-pizza.jpg"
+                                    type="button"
+                                >
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ==================================
+                         7. SPICY CHICKEN WINGS
+                    =================================== -->
+
+                    <article
+                        class="food-card menu-product"
+                        data-category="chicken"
+                        data-price="94.99"
+                        data-rating="4.8"
+                        data-name="Spicy Chicken Wings"
+                    >
+
+                        <div class="food-image">
+
+                            <span class="food-badge">
+                                Spicy
+                            </span>
+
+                            <button
+                                class="favorite-btn"
+                                type="button"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <img
+                                src="spicy chicken wings.jpg"
+                                alt="Spicy Chicken Wings"
+                            >
+
+                        </div>
+
+                        <div class="food-content">
+
+                            <div class="food-rating">
+                                <i class="fa-solid fa-star"></i>
+                                4.8
+                                <span>(72)</span>
+                            </div>
+
+                            <h3>Spicy Chicken Wings</h3>
+
+                            <p>
+                                Crispy chicken wings coated
+                                in our signature spicy sauce.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <div class="food-price">
+                                    <span>R</span>94.99
+                                </div>
+
+                                <button
+                                    class="add-cart-btn"
+                                    data-id="7"
+                                    data-name="Spicy Chicken Wings"
+                                    data-price="94.99"
+                                    data-image="images/chicken-wings.jpg"
+                                    type="button"
+                                >
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ==================================
+                         8. CHICKEN STRIPS
+                    =================================== -->
+
+                    <article
+                        class="food-card menu-product"
+                        data-category="chicken"
+                        data-price="79.99"
+                        data-rating="4.6"
+                        data-name="Crispy Chicken Strips"
+                    >
+
+                        <div class="food-image">
+
+                            <button
+                                class="favorite-btn"
+                                type="button"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <img
+                                src="crispy chicken strips.jpg"
+                                alt="Crispy Chicken Strips"
+                            >
+
+                        </div>
+
+                        <div class="food-content">
+
+                            <div class="food-rating">
+                                <i class="fa-solid fa-star"></i>
+                                4.6
+                                <span>(49)</span>
+                            </div>
+
+                            <h3>Crispy Chicken Strips</h3>
+
+                            <p>
+                                Golden chicken strips served
+                                with fries and dipping sauce.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <div class="food-price">
+                                    <span>R</span>79.99
+                                </div>
+
+                                <button
+                                    class="add-cart-btn"
+                                    data-id="8"
+                                    data-name="Crispy Chicken Strips"
+                                    data-price="79.99"
+                                    data-image="images/chicken-strips.jpg"
+                                    type="button"
+                                >
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ==================================
+                         9. COLA
+                    =================================== -->
+
+                    <article
+                        class="food-card menu-product"
+                        data-category="drinks"
+                        data-price="24.99"
+                        data-rating="4.5"
+                        data-name="Ice Cold Cola"
+                    >
+
+                        <div class="food-image">
+
+                            <button
+                                class="favorite-btn"
+                                type="button"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <img
+                                src="cola.jpg"
+                                alt="Ice Cold Cola"
+                            >
+
+                        </div>
+
+                        <div class="food-content">
+
+                            <div class="food-rating">
+                                <i class="fa-solid fa-star"></i>
+                                4.5
+                                <span>(40)</span>
+                            </div>
+
+                            <h3>Ice Cold Cola</h3>
+
+                            <p>
+                                Refreshing ice-cold cola,
+                                perfect with any meal.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <div class="food-price">
+                                    <span>R</span>24.99
+                                </div>
+
+                                <button
+                                    class="add-cart-btn"
+                                    data-id="9"
+                                    data-name="Ice Cold Cola"
+                                    data-price="24.99"
+                                    data-image="images/cola.jpg"
+                                    type="button"
+                                >
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ==================================
+                         10. LEMONADE
+                    =================================== -->
+
+                    <article
+                        class="food-card menu-product"
+                        data-category="drinks"
+                        data-price="34.99"
+                        data-rating="4.7"
+                        data-name="Fresh Lemonade"
+                    >
+
+                        <div class="food-image">
+
+                            <button
+                                class="favorite-btn"
+                                type="button"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <img
+                                src="lemonade.jpg"
+                                alt="Fresh Lemonade"
+                            >
+
+                        </div>
+
+                        <div class="food-content">
+
+                            <div class="food-rating">
+                                <i class="fa-solid fa-star"></i>
+                                4.7
+                                <span>(35)</span>
+                            </div>
+
+                            <h3>Fresh Lemonade</h3>
+
+                            <p>
+                                Fresh lemon juice served
+                                chilled with ice and mint.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <div class="food-price">
+                                    <span>R</span>34.99
+                                </div>
+
+                                <button
+                                    class="add-cart-btn"
+                                    data-id="10"
+                                    data-name="Fresh Lemonade"
+                                    data-price="34.99"
+                                    data-image="images/lemonade.jpg"
+                                    type="button"
+                                >
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ==================================
+                         11. CHOCOLATE CAKE
+                    =================================== -->
+
+                    <article
+                        class="food-card menu-product"
+                        data-category="dessert"
+                        data-price="59.99"
+                        data-rating="4.9"
+                        data-name="Chocolate Cake"
+                    >
+
+                        <div class="food-image">
+
+                            <span class="food-badge">
+                                Favourite
+                            </span>
+
+                            <button
+                                class="favorite-btn"
+                                type="button"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <img
+                                src="chocolate cake.jpg"
+                                alt="Chocolate Cake"
+                            >
+
+                        </div>
+
+                        <div class="food-content">
+
+                            <div class="food-rating">
+                                <i class="fa-solid fa-star"></i>
+                                4.9
+                                <span>(91)</span>
+                            </div>
+
+                            <h3>Chocolate Cake</h3>
+
+                            <p>
+                                Rich chocolate cake with
+                                creamy chocolate frosting.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <div class="food-price">
+                                    <span>R</span>59.99
+                                </div>
+
+                                <button
+                                    class="add-cart-btn"
+                                    data-id="11"
+                                    data-name="Chocolate Cake"
+                                    data-price="59.99"
+                                    data-image="images/chocolate-cake.jpg"
+                                    type="button"
+                                >
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ==================================
+                         12. ICE CREAM
+                    =================================== -->
+
+                    <article
+                        class="food-card menu-product"
+                        data-category="dessert"
+                        data-price="44.99"
+                        data-rating="4.8"
+                        data-name="Vanilla Ice Cream"
+                    >
+
+                        <div class="food-image">
+
+                            <button
+                                class="favorite-btn"
+                                type="button"
+                            >
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <img
+                                src="ice cream .jpg"
+                                alt="Vanilla Ice Cream"
+                            >
+
+                        </div>
+
+                        <div class="food-content">
+
+                            <div class="food-rating">
+                                <i class="fa-solid fa-star"></i>
+                                4.8
+                                <span>(53)</span>
+                            </div>
+
+                            <h3>Vanilla Ice Cream</h3>
+
+                            <p>
+                                Creamy vanilla ice cream
+                                topped with chocolate sauce.
+                            </p>
+
+                            <div class="food-bottom">
+
+                                <div class="food-price">
+                                    <span>R</span>44.99
+                                </div>
+
+                                <button
+                                    class="add-cart-btn"
+                                    data-id="12"
+                                    data-name="Vanilla Ice Cream"
+                                    data-price="44.99"
+                                    data-image="images/vanilla-icecream.jpg"
+                                    type="button"
+                                >
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- No results -->
+
+                <div
+                    class="menu-no-results"
+                    id="menuNoResults"
+                    hidden
+                >
+
+                    <div class="menu-no-results-icon">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+
+                    <h2>
+                        No meals found
+                    </h2>
+
+                    <p>
+                        Try searching for another meal
+                        or choose a different category.
+                    </p>
+
+                    <button
+                        class="btn btn-primary"
+                        id="resetMenuBtn"
+                        type="button"
+                    >
+                        Show All Meals
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROMO
+        =========================================== -->
+
+        <section class="promotion section">
+
+            <div class="container">
+
+                <div class="promotion-container">
+
+                    <div class="promotion-content">
+
+                        <span class="section-label">
+                            SAVE 20%
+                        </span>
+
+                        <h2>
+                            Craving a Burger?
+                        </h2>
+
+                        <p>
+                            Add your favourite burger to your
+                            cart and use our promotional code.
+                        </p>
+
+                        <div class="promo-code">
+                            Use code:
+                            <strong>BURGER20</strong>
+                        </div>
+
+                        <a
+                            href="cart.html"
+                            class="btn btn-light"
+                        >
+                            Go to Cart
+                        </a>
+
+                    </div>
+
+                    <div class="promotion-image">
+
+                        <img
+                            src="burger.jpg"
+                            alt="UrbanBite burger promotion"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+
+                    <a href="index.html" class="logo">
+                        Urban<span>Bite.</span>
+                    </a>
+
+                    <p>
+                        Fresh food, bold flavours and fast
+                        delivery.
+                    </p>
+
+                    <div class="social-links">
+
+                        <a href="#" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#" aria-label="TikTok">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>Quick Links</h4>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="menu.html">
+                        Menu
+                    </a>
+
+                    <a href="index.html#about">
+                        About
+                    </a>
+
+                    <a href="index.html#offers">
+                        Offers
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>Help</h4>
+
+                    <a href="cart.html">
+                        My Cart
+                    </a>
+
+                    <a href="checkout.html">
+                        Checkout
+                    </a>
+
+                    <a href="#">
+                        FAQs
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>Contact</h4>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Durban, South Africa
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        +27 31 000 0000
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        hello@urbanbite.co.za
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; 2026 UrbanBite.
+                    All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Separate JS for menu page -->
+    <script src="menu.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Cart | UrbanBite</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- ==========================================
+         HEADER
+    =========================================== -->
+
+    <header class="header">
+
+        <div class="container navbar">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                Urban<span>Bite.</span>
+            </a>
+
+
+            <!-- Navigation -->
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="index.html" class="nav-link">
+                    Home
+                </a>
+
+                <a href="index.html#menu" class="nav-link">
+                    Menu
+                </a>
+
+                <a href="index.html#about" class="nav-link">
+                    About
+                </a>
+
+                <a href="index.html#offers" class="nav-link">
+                    Offers
+                </a>
+
+                <a href="index.html#contact" class="nav-link">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <!-- Navigation Actions -->
+            <div class="nav-actions">
+
+                <a
+                    href="index.html#menu"
+                    class="nav-icon"
+                    aria-label="Search food"
+                >
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+
+
+                <button
+                    class="nav-icon"
+                    aria-label="Account"
+                >
+                    <i class="fa-regular fa-user"></i>
+                </button>
+
+                <a
+                     href="account.html"
+                     class="nav-icon"
+                     aria-label="My Account"
+                    >
+                     <i class="fa-regular fa-user"></i>
+                </a>
+
+
+                <a
+                    href="cart.html"
+                    class="cart-btn"
+                    aria-label="Shopping cart"
+                >
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <span
+                        class="cart-count"
+                        id="cartCount"
+                    >
+                        0
+                    </span>
+
+                </a>
+
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open menu"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==========================================
+         CART PAGE
+    =========================================== -->
+
+    <main class="cart-page">
+
+
+        <!-- ======================================
+             PAGE HEADING
+        ======================================= -->
+
+        <section class="cart-hero">
+
+            <div class="container">
+
+                <!-- Breadcrumb -->
+                <div class="breadcrumb">
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                    <span>
+                        Shopping Cart
+                    </span>
+
+                </div>
+
+
+                <span class="section-label">
+                    YOUR ORDER
+                </span>
+
+
+                <h1>
+                    Shopping Cart
+                </h1>
+
+
+                <p>
+                    Review your meals before continuing
+                    to checkout.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             CART CONTENT
+        ======================================= -->
+
+        <section class="cart-section">
+
+            <div class="container cart-layout">
+
+
+                <!-- ==================================
+                     LEFT SIDE
+                     CART PRODUCTS
+                =================================== -->
+
+                <div class="cart-products-wrapper">
+
+
+                    <!-- Cart Header -->
+                    <div class="cart-title-row">
+
+                        <div>
+
+                            <h2>
+                                Your Order
+                            </h2>
+
+                            <p id="cartItemText">
+                                0 items in your cart
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            class="clear-cart-btn"
+                            id="clearCartBtn"
+                            type="button"
+                        >
+                            <i class="fa-regular fa-trash-can"></i>
+
+                            Clear Cart
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- ==================================
+                         CART PRODUCTS GENERATED BY JS
+                    =================================== -->
+
+                    <div
+                        class="cart-items"
+                        id="cartItems"
+                    >
+
+                        <!--
+                            JavaScript will create products
+                            here from localStorage.
+
+                            Example:
+
+                            <article class="cart-item">
+
+                                <img src="images/classic-burger.jpg">
+
+                                <div class="cart-item-info">
+
+                                    <h3>
+                                        Classic Beef Burger
+                                    </h3>
+
+                                    <p>
+                                        R89.99
+                                    </p>
+
+                                </div>
+
+                            </article>
+                        -->
+
+                    </div>
+
+
+
+                    <!-- ==================================
+                         EMPTY CART
+                    =================================== -->
+
+                    <div
+                        class="empty-cart"
+                        id="emptyCart"
+                    >
+
+                        <div class="empty-cart-icon">
+
+                            <i class="fa-solid fa-bag-shopping"></i>
+
+                        </div>
+
+
+                        <h2>
+                            Your cart is empty
+                        </h2>
+
+
+                        <p>
+                            Looks like you haven't added
+                            anything delicious yet.
+                        </p>
+
+
+                        <a
+                            href="index.html#menu"
+                            class="btn btn-primary"
+                        >
+                            <i class="fa-solid fa-utensils"></i>
+
+                            Browse Menu
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- Continue Shopping -->
+                    <a
+                        href="index.html#menu"
+                        class="continue-shopping"
+                    >
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                        Continue Shopping
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- ==================================
+                     RIGHT SIDE
+                     ORDER SUMMARY
+                =================================== -->
+
+                <aside class="order-summary">
+
+
+                    <div class="summary-header">
+
+                        <h2>
+                            Order Summary
+                        </h2>
+
+                        <i class="fa-solid fa-receipt"></i>
+
+                    </div>
+
+
+
+                    <!-- Promo Code -->
+
+                    <div class="promo-section">
+
+                        <label for="promoInput">
+                            Promo Code
+                        </label>
+
+
+                        <div class="promo-input">
+
+                            <input
+                                type="text"
+                                id="promoInput"
+                                placeholder="Enter promo code"
+                                autocomplete="off"
+                            >
+
+
+                            <button
+                                id="applyPromoBtn"
+                                type="button"
+                            >
+                                Apply
+                            </button>
+
+                        </div>
+
+
+                        <p
+                            class="promo-message"
+                            id="promoMessage"
+                        ></p>
+
+                    </div>
+
+
+
+                    <!-- Summary Prices -->
+
+                    <div class="summary-prices">
+
+
+                        <!-- Subtotal -->
+
+                        <div class="summary-row">
+
+                            <span>
+                                Subtotal
+                            </span>
+
+                            <strong id="subtotal">
+                                R0.00
+                            </strong>
+
+                        </div>
+
+
+
+                        <!-- Delivery -->
+
+                        <div class="summary-row">
+
+                            <span>
+                                Delivery Fee
+                            </span>
+
+                            <strong id="deliveryFee">
+                                R0.00
+                            </strong>
+
+                        </div>
+
+
+
+                        <!-- Discount -->
+
+                        <div
+                            class="summary-row discount-row"
+                            id="discountRow"
+                        >
+
+                            <span>
+                                Discount
+                            </span>
+
+                            <strong id="discount">
+                                -R0.00
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Divider -->
+
+                    <div class="summary-divider"></div>
+
+
+
+                    <!-- Total -->
+
+                    <div class="summary-total">
+
+                        <div>
+
+                            <span>
+                                Total
+                            </span>
+
+                            <small>
+                                Including delivery
+                            </small>
+
+                        </div>
+
+
+                        <strong id="total">
+                            R0.00
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- Checkout Button -->
+
+                    <a
+                        href="checkout.html"
+                        class="checkout-btn"
+                        id="checkoutBtn"
+                    >
+
+                        Proceed to Checkout
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+
+                    <!-- Secure Checkout -->
+
+                    <div class="secure-checkout">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <span>
+                            Secure checkout
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- Payment Methods -->
+
+                    <div class="payment-methods">
+
+                        <span>
+                            We accept
+                        </span>
+
+
+                        <div class="payment-icons">
+
+                            <i class="fa-brands fa-cc-visa"></i>
+
+                            <i class="fa-brands fa-cc-mastercard"></i>
+
+                            <i class="fa-regular fa-credit-card"></i>
+
+                        </div>
+
+                    </div>
+
+
+                </aside>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             DELIVERY BENEFITS
+        ======================================= -->
+
+        <section class="cart-benefits">
+
+            <div class="container benefits-grid">
+
+
+                <!-- Benefit 1 -->
+
+                <div class="cart-benefit">
+
+                    <div class="benefit-icon">
+
+                        <i class="fa-solid fa-motorcycle"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Fast Delivery
+                        </h3>
+
+                        <p>
+                            Fresh food delivered
+                            straight to your door.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Benefit 2 -->
+
+                <div class="cart-benefit">
+
+                    <div class="benefit-icon">
+
+                        <i class="fa-solid fa-fire-burner"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Prepared Fresh
+                        </h3>
+
+                        <p>
+                            Your meal is prepared
+                            after you place your order.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Benefit 3 -->
+
+                <div class="cart-benefit">
+
+                    <div class="benefit-icon">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Secure Checkout
+                        </h3>
+
+                        <p>
+                            Your checkout information
+                            is handled securely.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+
+            <div class="footer-grid">
+
+
+                <!-- Brand -->
+
+                <div class="footer-brand">
+
+                    <a
+                        href="index.html"
+                        class="logo"
+                    >
+                        Urban<span>Bite.</span>
+                    </a>
+
+
+                    <p>
+                        Fresh food, bold flavours and fast
+                        delivery. Your favourite meals are
+                        only a few clicks away.
+                    </p>
+
+
+                    <div class="social-links">
+
+                        <a
+                            href="#"
+                            aria-label="Facebook"
+                        >
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+
+                        <a
+                            href="#"
+                            aria-label="Instagram"
+                        >
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+
+                        <a
+                            href="#"
+                            aria-label="TikTok"
+                        >
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+
+
+                        <a
+                            href="#"
+                            aria-label="Twitter"
+                        >
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Quick Links -->
+
+                <div class="footer-column">
+
+                    <h4>
+                        Quick Links
+                    </h4>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="index.html#menu">
+                        Menu
+                    </a>
+
+                    <a href="index.html#about">
+                        About Us
+                    </a>
+
+                    <a href="index.html#offers">
+                        Offers
+                    </a>
+
+                </div>
+
+
+
+                <!-- Customer Help -->
+
+                <div class="footer-column">
+
+                    <h4>
+                        Customer Help
+                    </h4>
+
+                    <a href="#">
+                        My Account
+                    </a>
+
+                    <a href="cart.html">
+                        My Cart
+                    </a>
+
+                    <a href="#">
+                        Track Order
+                    </a>
+
+                    <a href="#">
+                        FAQs
+                    </a>
+
+                </div>
+
+
+
+                <!-- Contact -->
+
+                <div class="footer-column">
+
+                    <h4>
+                        Contact
+                    </h4>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Durban, South Africa
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        +27 31 000 0000
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        hello@urbanbite.co.za
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Footer Bottom -->
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; 2026 UrbanBite.
+                    All rights reserved.
+                </p>
+
+
+                <div>
+
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#">
+                        Terms & Conditions
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ==========================================
+         CLEAR CART CONFIRMATION MODAL
+    =========================================== -->
+
+    <div
+        class="cart-modal"
+        id="clearCartModal"
+    >
+
+        <div class="cart-modal-content">
+
+
+            <div class="modal-icon">
+
+                <i class="fa-regular fa-trash-can"></i>
+
+            </div>
+
+
+            <h2>
+                Clear your cart?
+            </h2>
+
+
+            <p>
+                This will remove all meals
+                currently in your shopping cart.
+            </p>
+
+
+            <div class="modal-buttons">
+
+
+                <button
+                    class="modal-cancel"
+                    id="cancelClearBtn"
+                    type="button"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    class="modal-confirm"
+                    id="confirmClearBtn"
+                    type="button"
+                >
+                    Clear Cart
+                </button>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
+
+    <script src="cart.js"></script>
+
+</body>
+
+</html>

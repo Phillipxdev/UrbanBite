@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Create Account | UrbanBite</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="signin.css">
+
+    <!-- Authentication CSS -->
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+
+<body class="auth-body">
+
+    <!-- ==================================================
+         HEADER
+    =================================================== -->
+
+    <header class="header">
+
+        <div class="container navbar">
+
+            <a href="index.html" class="logo">
+                Urban<span>Bite.</span>
+            </a>
+
+
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="index.html" class="nav-link">
+                    Home
+                </a>
+
+                <a href="menu.html" class="nav-link">
+                    Menu
+                </a>
+
+                <a href="index.html#about" class="nav-link">
+                    About
+                </a>
+
+                <a href="index.html#offers" class="nav-link">
+                    Offers
+                </a>
+
+                <a href="index.html#contact" class="nav-link">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <div class="nav-actions">
+
+                <!-- Account -->
+                <a
+                    href="signin.html"
+                    class="nav-icon active-account"
+                    aria-label="Account"
+                >
+                    <i class="fa-regular fa-user"></i>
+                </a>
+
+
+                <!-- Cart -->
+                <a
+                    href="cart.html"
+                    class="cart-btn"
+                    aria-label="Shopping cart"
+                >
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <span
+                        class="cart-count"
+                        id="cartCount"
+                    >
+                        0
+                    </span>
+
+                </a>
+
+
+                <!-- Mobile Menu -->
+                <button
+                    type="button"
+                    class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open navigation"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==================================================
+         SIGN UP PAGE
+    =================================================== -->
+
+    <main class="auth-page">
+
+        <section class="auth-section">
+
+            <!-- Background Glow -->
+            <div class="auth-glow auth-glow-one"></div>
+            <div class="auth-glow auth-glow-two"></div>
+
+
+            <div class="container auth-container">
+
+
+                <!-- ==================================================
+                     LEFT SIDE
+                =================================================== -->
+
+                <div class="auth-info">
+
+                    <a
+                        href="index.html"
+                        class="auth-back-link"
+                    >
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Back to UrbanBite
+                    </a>
+
+
+                    <span class="section-label">
+                        JOIN URBANBITE
+                    </span>
+
+
+                    <h1>
+                        Your Next Meal
+                        <span>Starts Here.</span>
+                    </h1>
+
+
+                    <p class="auth-description">
+                        Create your UrbanBite account and make
+                        ordering your favourite meals faster,
+                        easier and more convenient.
+                    </p>
+
+
+                    <!-- Benefits -->
+
+                    <div class="auth-benefits">
+
+                        <!-- Benefit 1 -->
+
+                        <div class="auth-benefit">
+
+                            <div class="auth-benefit-icon">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Quick Checkout
+                                </h3>
+
+                                <p>
+                                    Save your customer details
+                                    and enjoy a faster checkout
+                                    experience.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Benefit 2 -->
+
+                        <div class="auth-benefit">
+
+                            <div class="auth-benefit-icon">
+                                <i class="fa-solid fa-receipt"></i>
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Track Your Orders
+                                </h3>
+
+                                <p>
+                                    Keep your UrbanBite order
+                                    information together in
+                                    your account.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Benefit 3 -->
+
+                        <div class="auth-benefit">
+
+                            <div class="auth-benefit-icon">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Save Favourites
+                                </h3>
+
+                                <p>
+                                    Keep your favourite meals
+                                    ready whenever you're
+                                    hungry.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ==================================================
+                     RIGHT SIDE
+                =================================================== -->
+
+                <div class="auth-card signup-card">
+
+
+                    <!-- Header -->
+
+                    <div class="auth-card-header">
+
+                        <div class="auth-card-icon">
+                            <i class="fa-solid fa-user-plus"></i>
+                        </div>
+
+
+                        <span class="section-label">
+                            CREATE ACCOUNT
+                        </span>
+
+
+                        <h2>
+                            Sign Up
+                        </h2>
+
+
+                        <p>
+                            Enter your information to create
+                            your UrbanBite account.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- ==================================================
+                         GENERAL MESSAGE
+                    =================================================== -->
+
+                    <div
+                        class="auth-message"
+                        id="signupMessage"
+                        role="alert"
+                        hidden
+                    >
+                    </div>
+
+
+
+                    <!-- ==================================================
+                         SIGN UP FORM
+                    =================================================== -->
+
+                    <form
+                        class="auth-form"
+                        id="signupForm"
+                        novalidate
+                    >
+
+
+                        <!-- ==============================================
+                             FIRST + LAST NAME
+                        =============================================== -->
+
+                        <div class="signup-name-grid">
+
+
+                            <!-- First Name -->
+
+                            <div class="auth-form-group">
+
+                                <label for="signupFirstName">
+                                    First Name
+                                </label>
+
+
+                                <div class="auth-input-box">
+
+                                    <i class="fa-regular fa-user"></i>
+
+                                    <input
+                                        type="text"
+                                        id="signupFirstName"
+                                        name="firstName"
+                                        placeholder="First name"
+                                        autocomplete="given-name"
+                                        maxlength="40"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <small
+                                    class="auth-error"
+                                    id="firstNameError"
+                                ></small>
+
+                            </div>
+
+
+
+                            <!-- Last Name -->
+
+                            <div class="auth-form-group">
+
+                                <label for="signupLastName">
+                                    Last Name
+                                </label>
+
+
+                                <div class="auth-input-box">
+
+                                    <i class="fa-regular fa-user"></i>
+
+                                    <input
+                                        type="text"
+                                        id="signupLastName"
+                                        name="lastName"
+                                        placeholder="Last name"
+                                        autocomplete="family-name"
+                                        maxlength="40"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <small
+                                    class="auth-error"
+                                    id="lastNameError"
+                                ></small>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ==============================================
+                             EMAIL
+                        =============================================== -->
+
+                        <div class="auth-form-group">
+
+                            <label for="signupEmail">
+                                Email Address
+                            </label>
+
+
+                            <div class="auth-input-box">
+
+                                <i class="fa-regular fa-envelope"></i>
+
+                                <input
+                                    type="email"
+                                    id="signupEmail"
+                                    name="email"
+                                    placeholder="you@example.com"
+                                    autocomplete="email"
+                                    maxlength="100"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <small
+                                class="auth-error"
+                                id="signupEmailError"
+                            ></small>
+
+                        </div>
+
+
+
+                        <!-- ==============================================
+                             PHONE
+                        =============================================== -->
+
+                        <div class="auth-form-group">
+
+                            <label for="signupPhone">
+                                Phone Number
+                            </label>
+
+
+                            <div class="auth-input-box">
+
+                                <i class="fa-solid fa-phone"></i>
+
+                                <input
+                                    type="tel"
+                                    id="signupPhone"
+                                    name="phone"
+                                    placeholder="e.g. 082 123 4567"
+                                    autocomplete="tel"
+                                    inputmode="tel"
+                                    maxlength="15"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <small
+                                class="auth-error"
+                                id="phoneError"
+                            ></small>
+
+                        </div>
+
+
+
+                        <!-- ==============================================
+                             PASSWORD
+                        =============================================== -->
+
+                        <div class="auth-form-group">
+
+                            <label for="signupPassword">
+                                Password
+                            </label>
+
+
+                            <div class="auth-input-box">
+
+                                <i class="fa-solid fa-lock"></i>
+
+                                <input
+                                    type="password"
+                                    id="signupPassword"
+                                    name="password"
+                                    placeholder="Create a password"
+                                    autocomplete="new-password"
+                                    minlength="6"
+                                    required
+                                >
+
+
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    id="signupPasswordToggle"
+                                    aria-label="Show password"
+                                >
+
+                                    <i class="fa-regular fa-eye"></i>
+
+                                </button>
+
+                            </div>
+
+
+                            <small
+                                class="auth-error"
+                                id="signupPasswordError"
+                            ></small>
+
+
+                            <!-- Password Strength -->
+
+                            <div class="password-strength">
+
+                                <div class="password-strength-bar">
+
+                                    <span
+                                        id="passwordStrengthBar"
+                                    ></span>
+
+                                </div>
+
+
+                                <p id="passwordStrengthText">
+                                    Use at least 6 characters.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ==============================================
+                             CONFIRM PASSWORD
+                        =============================================== -->
+
+                        <div class="auth-form-group">
+
+                            <label for="confirmPassword">
+                                Confirm Password
+                            </label>
+
+
+                            <div class="auth-input-box">
+
+                                <i class="fa-solid fa-lock"></i>
+
+                                <input
+                                    type="password"
+                                    id="confirmPassword"
+                                    name="confirmPassword"
+                                    placeholder="Enter password again"
+                                    autocomplete="new-password"
+                                    minlength="6"
+                                    required
+                                >
+
+
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    id="confirmPasswordToggle"
+                                    aria-label="Show password"
+                                >
+
+                                    <i class="fa-regular fa-eye"></i>
+
+                                </button>
+
+                            </div>
+
+
+                            <small
+                                class="auth-error"
+                                id="confirmPasswordError"
+                            ></small>
+
+                        </div>
+
+
+
+                        <!-- ==============================================
+                             TERMS
+                        =============================================== -->
+
+                        <div class="signup-terms">
+
+                            <label class="remember-checkbox">
+
+                                <input
+                                    type="checkbox"
+                                    id="acceptTerms"
+                                    name="acceptTerms"
+                                    required
+                                >
+
+
+                                <span class="custom-checkbox">
+
+                                    <i class="fa-solid fa-check"></i>
+
+                                </span>
+
+
+                                <span>
+                                    I agree to the
+                                    <a href="#">
+                                        Terms
+                                    </a>
+                                    and
+                                    <a href="#">
+                                        Privacy Policy
+                                    </a>.
+                                </span>
+
+                            </label>
+
+
+                            <small
+                                class="auth-error"
+                                id="termsError"
+                            ></small>
+
+                        </div>
+
+
+
+                        <!-- ==============================================
+                             SUBMIT
+                        =============================================== -->
+
+                        <button
+                            type="submit"
+                            class="auth-submit-btn"
+                            id="signupBtn"
+                        >
+
+                            <span>
+                                Create Account
+                            </span>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+                    </form>
+
+
+
+                    <!-- ==================================================
+                         DIVIDER
+                    =================================================== -->
+
+                    <div class="auth-divider">
+
+                        <span></span>
+
+                        <p>
+                            Already have an account?
+                        </p>
+
+                        <span></span>
+
+                    </div>
+
+
+
+                    <!-- ==================================================
+                         SIGN IN LINK
+                    =================================================== -->
+
+                    <a
+                        href="signin.html"
+                        class="auth-secondary-btn"
+                    >
+
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+
+                        Sign In Instead
+
+                    </a>
+
+
+
+                    <!-- ==================================================
+                         SECURITY
+                    =================================================== -->
+
+                    <div class="auth-security">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <p>
+                            UrbanBite authentication is currently
+                            running as a front-end demo.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==================================================
+         FOOTER
+    =================================================== -->
+
+    <footer class="auth-footer">
+
+        <div class="container auth-footer-content">
+
+            <p>
+                &copy; 2026 UrbanBite.
+                All rights reserved.
+            </p>
+
+
+            <div class="auth-footer-links">
+
+                <a href="#">
+                    Privacy
+                </a>
+
+                <a href="#">
+                    Terms
+                </a>
+
+                <a href="index.html#contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    =================================================== -->
+
+    <script src="signup.js"></script>
+
+</body>
+
+</html>

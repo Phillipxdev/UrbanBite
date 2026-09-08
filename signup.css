@@ -1,0 +1,87 @@
+/* ======================================================
+   SIGN UP
+====================================================== */
+
+.signup-card {
+    max-width: 500px;
+}
+
+.signup-name-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.signup-terms {
+    margin-top: -3px;
+}
+
+.signup-terms .remember-checkbox {
+    align-items: flex-start;
+    line-height: 1.6;
+}
+
+.signup-terms .remember-checkbox > span:last-child {
+    flex: 1;
+}
+
+.signup-terms a {
+    color: #ff6b00;
+    text-decoration: none;
+}
+
+.signup-terms a:hover {
+    text-decoration: underline;
+}
+
+
+/* Password Strength */
+
+.password-strength {
+    margin-top: 9px;
+}
+
+.password-strength-bar {
+    width: 100%;
+    height: 4px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.password-strength-bar span {
+    display: block;
+
+    width: 0;
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: #ff6b00;
+
+    transition:
+        width 0.3s ease,
+        background 0.3s ease;
+}
+
+.password-strength p {
+    margin: 6px 0 0;
+
+    color: #666;
+
+    font-size: 0.7rem;
+}
+
+
+/* Mobile */
+
+@media (max-width: 520px) {
+
+    .signup-name-grid {
+        grid-template-columns: 1fr;
+        gap: 21px;
+    }
+}

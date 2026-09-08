@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UrbanBite | Restaurant & Food Delivery</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="container navbar">
+
+            <a href="index.html" class="logo">
+                <span>UrbanBite.</span>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#offers" class="nav-link">Offers</a>
+                <a href="#contact" class="nav-link">Contact</a>
+
+            </nav>
+
+            <div class="nav-actions">
+
+                <button class="nav-icon" id="searchBtn" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+                <a href="account.html" class="nav-icon account-link" id="accountLink" aria-label="My Account">
+                  <i class="fa-regular fa-user"></i>
+                </a>
+
+                <a href="cart.html" class="cart-btn">
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <span class="cart-count" id="cartCount">
+                        0
+                    </span>
+
+                </a>
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open navigation"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <div class="account-nav" id="accountNav">
+
+    <a href="signin.html"
+       class="nav-icon"
+       id="signInLink"
+       aria-label="Sign In">
+
+        <i class="fa-regular fa-user"></i>
+
+    </a>
+
+    <div class="user-menu" id="userMenu" hidden>
+
+        <button
+            type="button"
+            class="nav-icon user-menu-btn"
+            id="userMenuBtn"
+            aria-label="Account menu"
+        >
+            <i class="fa-solid fa-user"></i>
+        </button>
+
+
+        <div class="user-dropdown" id="userDropdown">
+
+            <div class="user-dropdown-header">
+
+                <div class="user-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div>
+                    <strong id="navUserName">
+                        Customer
+                    </strong>
+
+                    <span id="navUserEmail">
+                        customer@email.com
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="user-dropdown-divider"></div>
+
+
+            <a href="account.html">
+                <i class="fa-regular fa-user"></i>
+                My Account
+            </a>
+
+
+            <a href="account.html#orders">
+                <i class="fa-solid fa-receipt"></i>
+                My Orders
+            </a>
+
+
+            <button
+                type="button"
+                class="signout-btn"
+                id="signOutBtn"
+            >
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                Sign Out
+            </button>
+
+        </div>
+
+    </div>
+
+    </div>
+
+    <div class="search-overlay" id="searchOverlay">
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search burgers, pizza, chicken..."
+            >
+
+            <button aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+        </div>
+
+        <button class="close-search" id="closeSearch">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="container hero-container">
+
+                <div class="hero-content">
+
+                    <span class="hero-tag">
+                        🔥 Fresh food. Fast delivery.
+                    </span>
+
+                    <h1>
+                        Good Food.
+                        <br>
+                        <span>Great Mood.</span>
+                    </h1>
+
+                    <p>
+                        Discover delicious meals prepared with fresh
+                        ingredients and delivered straight to your door.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#menu" class="btn btn-primary">
+                            Order Now
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                        <a href="#about" class="btn btn-outline">
+                            Explore Restaurant
+                        </a>
+
+                    </div>
+
+                    <div class="hero-stats">
+
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Meals</p>
+                        </div>
+
+                        <div class="stat">
+                            <h3>4.9</h3>
+                            <p>Customer Rating</p>
+                        </div>
+
+                        <div class="stat">
+                            <h3>30 min</h3>
+                            <p>Average Delivery</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-image">
+
+                    <div class="image-circle"></div>
+
+                    <img
+                        src="restaurant.png"
+                        alt="Delicious UrbanBite restaurant meal"
+                    >
+
+                    <div class="floating-card rating-card">
+
+                        <div class="floating-icon">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <div>
+                            <strong>4.9</strong>
+                            <span>2.5k Reviews</span>
+                        </div>
+
+                    </div>
+
+                    <div class="floating-card delivery-card">
+
+                        <div class="floating-icon">
+                            <i class="fa-solid fa-motorcycle"></i>
+                        </div>
+
+                        <div>
+                            <strong>Fast Delivery</strong>
+                            <span>20 - 30 min</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="categories section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="section-label">
+                            CATEGORIES
+                        </span>
+
+                        <h2>
+                            What are you craving?
+                        </h2>
+                    </div>
+
+                    <a href="menu.html" class="view-all">
+                        View Full Menu
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="category-grid">
+
+                    <button class="category-card active" data-category="all">
+
+                        <div class="category-icon">
+                            🍽️
+                        </div>
+
+                        <span>All</span>
+
+                    </button>
+
+
+                    <button class="category-card" data-category="burger">
+
+                        <div class="category-icon">
+                            🍔
+                        </div>
+
+                        <span>Burgers</span>
+
+                    </button>
+
+
+                    <button class="category-card" data-category="pizza">
+
+                        <div class="category-icon">
+                            🍕
+                        </div>
+
+                        <span>Pizza</span>
+
+                    </button>
+
+
+                    <button class="category-card" data-category="chicken">
+
+                        <div class="category-icon">
+                            🍗
+                        </div>
+
+                        <span>Chicken</span>
+
+                    </button>
+
+
+                    <button class="category-card" data-category="drinks">
+
+                        <div class="category-icon">
+                            🥤
+                        </div>
+
+                        <span>Drinks</span>
+
+                    </button>
+
+
+                    <button class="category-card" data-category="dessert">
+
+                        <div class="category-icon">
+                            🍰
+                        </div>
+
+                        <span>Desserts</span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+     POPULAR MENU
+========================== -->
+<section class="menu-section section" id="menu">
+
+    <div class="container">
+
+        <!-- Section Heading -->
+        <div class="section-heading">
+
+            <div>
+                <span class="section-label">
+                    OUR MENU
+                </span>
+
+                <h2>Popular Dishes</h2>
+
+                <p>
+                    Hand-picked customer favourites made fresh
+                    every day.
+                </p>
+            </div>
+
+            <a href="menu.html" class="view-all">
+                See All Meals
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <!-- =========================
+             FOOD GRID
+        ========================== -->
+        <div class="food-grid">
+
+
+            <!-- =========================
+                 PRODUCT 1 - BEEF BURGER
+            ========================== -->
+            <article class="food-card" data-category="burger">
+
+                <div class="food-image">
+
+                    <span class="food-badge">
+                        Popular
+                    </span>
+
+                    <button
+                        class="favorite-btn"
+                        type="button"
+                        aria-label="Add Classic Beef Burger to favourites"
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <img
+                        src="beef burger.jpg"
+                        alt="Classic Beef Burger"
+                    >
+
+                </div>
+
+
+                <div class="food-content">
+
+                    <div class="food-rating">
+                        <i class="fa-solid fa-star"></i>
+                        4.9
+                        <span>(120)</span>
+                    </div>
+
+                    <h3>Classic Beef Burger</h3>
+
+                    <p>
+                        Beef patty, cheddar cheese, lettuce,
+                        tomato and our signature sauce.
+                    </p>
+
+
+                    <div class="food-bottom">
+
+                        <div class="food-price">
+                            <span>R</span>89.99
+                        </div>
+
+                        <button
+                            class="add-cart-btn"
+                            type="button"
+                            data-id="1"
+                            data-name="Classic Beef Burger"
+                            data-price="89.99"
+                            data-image="beef burger.jpg"
+                            aria-label="Add Classic Beef Burger to cart"
+                        >
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =========================
+                 PRODUCT 2 - PIZZA
+            ========================== -->
+            <article class="food-card" data-category="pizza">
+
+                <div class="food-image">
+
+                    <span class="food-badge">
+                        Best Seller
+                    </span>
+
+                    <button
+                        class="favorite-btn"
+                        type="button"
+                        aria-label="Add Pepperoni Pizza to favourites"
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <img
+                        src="pepperoni pizza.jpg"
+                        alt="Pepperoni Pizza"
+                    >
+
+                </div>
+
+
+                <div class="food-content">
+
+                    <div class="food-rating">
+                        <i class="fa-solid fa-star"></i>
+                        4.8
+                        <span>(98)</span>
+                    </div>
+
+                    <h3>Pepperoni Pizza</h3>
+
+                    <p>
+                        Mozzarella cheese, pepperoni,
+                        tomato sauce and Italian herbs.
+                    </p>
+
+
+                    <div class="food-bottom">
+
+                        <div class="food-price">
+                            <span>R</span>129.99
+                        </div>
+
+                        <button
+                            class="add-cart-btn"
+                            type="button"
+                            data-id="2"
+                            data-name="Pepperoni Pizza"
+                            data-price="129.99"
+                            data-image="pepperoni pizza.jpg"
+                            aria-label="Add Pepperoni Pizza to cart"
+                        >
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =========================
+                 PRODUCT 3 - CHICKEN
+            ========================== -->
+            <article class="food-card" data-category="chicken">
+
+                <div class="food-image">
+
+                    <button
+                        class="favorite-btn"
+                        type="button"
+                        aria-label="Add Grilled Chicken to favourites"
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <img
+                        src="whole-grilled-chicken.jpg"
+                        alt="Grilled Chicken"
+                    >
+
+                </div>
+
+
+                <div class="food-content">
+
+                    <div class="food-rating">
+                        <i class="fa-solid fa-star"></i>
+                        4.7
+                        <span>(86)</span>
+                    </div>
+
+                    <h3>Grilled Chicken</h3>
+
+                    <p>
+                        Flame-grilled chicken served with
+                        crispy fries and fresh salad.
+                    </p>
+
+
+                    <div class="food-bottom">
+
+                        <div class="food-price">
+                            <span>R</span>109.99
+                        </div>
+
+                        <button
+                            class="add-cart-btn"
+                            type="button"
+                            data-id="3"
+                            data-name="Grilled Chicken"
+                            data-price="109.99"
+                            data-image="whole-grilled-chicken.jpg"
+                            aria-label="Add Grilled Chicken to cart"
+                        >
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =========================
+                 PRODUCT 4 - CHICKEN BURGER
+            ========================== -->
+            <article class="food-card" data-category="burger">
+
+                <div class="food-image">
+
+                    <span class="food-badge">
+                        New
+                    </span>
+
+                    <button
+                        class="favorite-btn"
+                        type="button"
+                        aria-label="Add Crispy Chicken Burger to favourites"
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <img
+                        src="Crispiest-buttermilk-fried-chicken-burgers-90854e5.jpg"
+                        alt="Crispy Chicken Burger"
+                    >
+
+                </div>
+
+
+                <div class="food-content">
+
+                    <div class="food-rating">
+                        <i class="fa-solid fa-star"></i>
+                        4.9
+                        <span>(74)</span>
+                    </div>
+
+                    <h3>Crispy Chicken Burger</h3>
+
+                    <p>
+                        Crispy chicken, lettuce, pickles
+                        and creamy UrbanBite sauce.
+                    </p>
+
+
+                    <div class="food-bottom">
+
+                        <div class="food-price">
+                            <span>R</span>84.99
+                        </div>
+
+                        <button
+                            class="add-cart-btn"
+                            type="button"
+                            data-id="4"
+                            data-name="Crispy Chicken Burger"
+                            data-price="84.99"
+                            data-image="Crispiest-buttermilk-fried-chicken-burgers-90854e5.jpg"
+                            aria-label="Add Crispy Chicken Burger to cart"
+                        >
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =========================
+                 PRODUCT 5 - COCA COLA
+            ========================== -->
+            <article class="food-card" data-category="drinks">
+
+                <div class="food-image">
+
+                    <span class="food-badge">
+                        Refreshing
+                    </span>
+
+                    <button
+                        class="favorite-btn"
+                        type="button"
+                        aria-label="Add Coca Cola to favourites"
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <img
+                        src="cola.jpg"
+                        alt="Coca Cola"
+                    >
+
+                </div>
+
+
+                <div class="food-content">
+
+                    <div class="food-rating">
+                        <i class="fa-solid fa-star"></i>
+                        4.8
+                        <span>(64)</span>
+                    </div>
+
+                    <h3>Coca Cola</h3>
+
+                    <p>
+                        Ice-cold Coca Cola served chilled.
+                    </p>
+
+
+                    <div class="food-bottom">
+
+                        <div class="food-price">
+                            <span>R</span>24.99
+                        </div>
+
+                        <button
+                            class="add-cart-btn"
+                            type="button"
+                            data-id="7"
+                            data-name="Coca Cola"
+                            data-price="24.99"
+                            data-image="coca-cola.jpg"
+                            aria-label="Add Coca Cola to cart"
+                        >
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =========================
+                 PRODUCT 6 - ORANGE JUICE
+            ========================== -->
+            <article class="food-card" data-category="drinks">
+
+                <div class="food-image">
+
+                    <span class="food-badge">
+                        Fresh
+                    </span>
+
+                    <button
+                        class="favorite-btn"
+                        type="button"
+                        aria-label="Add Fresh Orange Juice to favourites"
+                    >
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <img
+                        src="lemonade.jpg"
+                        alt="Fresh Orange Juice"
+                    >
+
+                </div>
+
+
+                <div class="food-content">
+
+                    <div class="food-rating">
+                        <i class="fa-solid fa-star"></i>
+                        4.7
+                        <span>(51)</span>
+                    </div>
+
+                    <h3>Fresh Orange Juice</h3>
+
+                    <p>
+                        Freshly squeezed orange juice served chilled.
+                    </p>
+
+
+                    <div class="food-bottom">
+
+                        <div class="food-price">
+                            <span>R</span>34.99
+                        </div>
+
+                        <button
+                            class="add-cart-btn"
+                            type="button"
+                            data-id="8"
+                            data-name="Fresh Orange Juice"
+                            data-price="34.99"
+                            data-image="orange-juice.jpg"
+                            aria-label="Add Fresh Orange Juice to cart"
+                        >
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+    
+
+
+    <!-- =========================
+     PRODUCT 7 - CHOCOLATE CAKE
+========================== -->
+<article class="food-card" data-category="dessert">
+
+    <div class="food-image">
+
+        <span class="food-badge">
+            Popular
+        </span>
+
+        <button
+            class="favorite-btn"
+            type="button"
+            aria-label="Add Chocolate Cake to favourites"
+        >
+            <i class="fa-regular fa-heart"></i>
+        </button>
+
+        <img
+            src="chocolate cake.jpg"
+            alt="Chocolate Cake"
+        >
+
+    </div>
+
+    <div class="food-content">
+
+        <div class="food-rating">
+            <i class="fa-solid fa-star"></i>
+            4.9
+            <span>(82)</span>
+        </div>
+
+        <h3>Chocolate Cake</h3>
+
+        <p>
+            Rich chocolate cake layered with smooth
+            chocolate frosting.
+        </p>
+
+        <div class="food-bottom">
+
+            <div class="food-price">
+                <span>R</span>49.99
+            </div>
+
+            <button
+                class="add-cart-btn"
+                type="button"
+                data-id="9"
+                data-name="Chocolate Cake"
+                data-price="49.99"
+                data-image="chocolate-cake.jpg"
+                aria-label="Add Chocolate Cake to cart"
+            >
+                <i class="fa-solid fa-plus"></i>
+            </button>
+
+        </div>
+
+     </div>
+  </article>
+
+
+   <!-- =========================
+     PRODUCT 8 - VANILLA ICE CREAM
+    ========================== -->
+    <article class="food-card" data-category="dessert">
+
+      <div class="food-image">
+
+        <span class="food-badge">
+            Sweet
+        </span>
+
+        <button
+            class="favorite-btn"
+            type="button"
+            aria-label="Add Vanilla Ice Cream to favourites"
+        >
+            <i class="fa-regular fa-heart"></i>
+        </button>
+
+        <img
+            src="vanilla-ice-cream.jpg"
+            alt="Vanilla Ice Cream"
+        >
+
+     </div>
+
+     <div class="food-content">
+
+        <div class="food-rating">
+            <i class="fa-solid fa-star"></i>
+            4.8
+            <span>(67)</span>
+        </div>
+
+        <h3>Vanilla Ice Cream</h3>
+
+        <p>
+            Creamy vanilla ice cream topped with
+            chocolate sauce and crunchy sprinkles.
+        </p>
+
+        <div class="food-bottom">
+
+            <div class="food-price">
+                <span>R</span>39.99
+            </div>
+
+            <button
+                class="add-cart-btn"
+                type="button"
+                data-id="10"
+                data-name="Vanilla Ice Cream"
+                data-price="39.99"
+                data-image="vanilla-ice-cream.jpg"
+                aria-label="Add Vanilla Ice Cream to cart"
+            >
+                <i class="fa-solid fa-plus"></i>
+            </button> 
+
+        </div>
+
+      </div>
+
+   </article>
+
+
+ <!-- END FOOD GRID -->
+ </div>
+
+
+ <!-- Mobile Full Menu Button -->
+ <div class="mobile-menu-button">
+
+    <a href="menu.html" class="btn btn-primary">
+        Browse Full Menu
+    </a>
+
+ </div>
+
+  </article>
+
+
+        <!-- Mobile Full Menu Button -->
+     <div class="mobile-menu-button">
+
+     <a href="menu.html" class="btn btn-primary">
+        Browse Full Menu
+     </a>
+
+   </div>
+
+    </div>
+
+</section>
+
+        <!-- =========================
+             PROMOTION
+        ========================== -->
+        <section class="promotion section" id="offers">
+
+            <div class="container">
+
+                <div class="promotion-container">
+
+                    <div class="promotion-content">
+
+                        <span class="section-label">
+                            SPECIAL OFFER
+                        </span>
+
+                        <h2>
+                            Burger Night
+                            <br>
+                            Just Got Better.
+                        </h2>
+
+                        <p>
+                            Get 20% off selected burgers every
+                            Friday evening.
+                        </p>
+
+                        <div class="promo-code">
+                            Use code:
+                            <strong>BURGER20</strong>
+                        </div>
+
+                        <a href="#menu" class="btn btn-light">
+                            Order Now
+                        </a>
+
+                    </div>
+
+                    <div class="promotion-image">
+
+                        <img
+                             src="promo burger.png"
+                             alt="UrbanBite Burger Night special offer"
+                             loading="lazy"
+                             decoding="async"
+                             >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+        <section class="about section" id="about">
+
+            <div class="container about-container">
+
+                <div class="about-image">
+
+                    <img
+                     src="restaurant.png"
+                     alt="UrbanBite restaurant serving freshly prepared meals in Durban"
+                     loading="lazy"
+                     decoding="async"
+                     >
+
+                    <div class="experience-box">
+                        <strong>10+</strong>
+                        <span>Years of flavour</span>
+                    </div>
+
+                </div>
+
+
+                <div class="about-content">
+
+                    <span class="section-label">
+                        ABOUT URBANBITE
+                    </span>
+
+                    <h2>
+                        Food made with passion.
+                    </h2>
+
+                    <p>
+                        At UrbanBite, we believe great food starts
+                        with quality ingredients. Every meal is
+                        prepared fresh and packed with flavour.
+                    </p>
+
+                    <div class="about-features">
+
+                        <div class="about-feature">
+
+                            <i class="fa-solid fa-leaf"></i>
+
+                            <div>
+                                <h4>Fresh Ingredients</h4>
+                                <p>
+                                    Quality ingredients prepared
+                                    fresh every day.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="about-feature">
+
+                            <i class="fa-solid fa-truck-fast"></i>
+
+                            <div>
+                                <h4>Fast Delivery</h4>
+                                <p>
+                                    Hot food delivered directly
+                                    to your door.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="about-feature">
+
+                            <i class="fa-solid fa-utensils"></i>
+
+                            <div>
+                                <h4>Made To Order</h4>
+                                <p>
+                                    Your meal is prepared when
+                                    you place your order.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <a href="#menu" class="btn btn-primary">
+                        Explore Our Menu
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             NEWSLETTER
+        ========================== -->
+        <section class="newsletter section">
+
+            <div class="container">
+
+                <div class="newsletter-box">
+
+                    <div>
+
+                        <span class="section-label">
+                            STAY UPDATED
+                        </span>
+
+                        <h2>
+                            Get delicious deals.
+                        </h2>
+
+                        <p>
+                            Subscribe for new meals, special
+                            offers and exclusive discounts.
+                        </p>
+
+                    </div>
+
+
+                    <form class="newsletter-form">
+
+                        <input
+                            type="email"
+                            placeholder="Enter your email address"
+                            required
+                        >
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            Subscribe
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="footer" id="contact">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <!-- Brand -->
+                <div class="footer-brand">
+
+                    <a href="index.html" class="logo">
+                        Urban<span>Bite.</span>
+                    </a>
+
+                    <p>
+                        Fresh food, bold flavours and fast
+                        delivery. Your favourite meals are
+                        only a few clicks away.
+                    </p>
+
+                    <div class="social-links">
+
+                        <a href="#" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#" aria-label="TikTok">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+
+                        <a href="#" aria-label="Twitter">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Links -->
+                <div class="footer-column">
+
+                    <h4>Quick Links</h4>
+
+                    <a href="#home">Home</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#about">About Us</a>
+                    <a href="#offers">Offers</a>
+
+                </div>
+
+
+                <!-- Help -->
+                <div class="footer-column">
+
+                    <h4>Help</h4>
+
+                    <a href="account.html">My Account</a>
+                    <a href="cart.html">My Cart</a>
+                    <a href="#">Track Order</a>
+                    <a href="#">FAQs</a>
+
+                </div>
+
+
+                <!-- Contact -->
+                <div class="footer-column">
+
+                    <h4>Contact</h4>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Durban, South Africa
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        +27 31 000 0000
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        hello@urbanbite.co.za
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; 2026 UrbanBite. All rights reserved.
+                </p>
+
+                <div>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

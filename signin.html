@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Sign In | UrbanBite</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Authentication CSS -->
+    <link rel="stylesheet" href="signin.css">
+
+</head>
+
+
+<body class="auth-body">
+
+    <!-- ==================================================
+         HEADER
+    =================================================== -->
+
+    <header class="header">
+
+        <div class="container navbar">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                Urban<span>Bite.</span>
+            </a>
+
+
+            <!-- Navigation -->
+            <nav
+                class="nav-menu"
+                id="navMenu"
+            >
+
+                <a
+                    href="index.html"
+                    class="nav-link"
+                >
+                    Home
+                </a>
+
+                <a
+                    href="menu.html"
+                    class="nav-link"
+                >
+                    Menu
+                </a>
+
+                <a
+                    href="index.html#about"
+                    class="nav-link"
+                >
+                    About
+                </a>
+
+                <a
+                    href="index.html#offers"
+                    class="nav-link"
+                >
+                    Offers
+                </a>
+
+                <a
+                    href="index.html#contact"
+                    class="nav-link"
+                >
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <!-- Actions -->
+            <div class="nav-actions">
+
+                <!-- Account -->
+                <a
+                    href="signin.html"
+                    class="nav-icon active-account"
+                    aria-label="Account"
+                >
+                    <i class="fa-regular fa-user"></i>
+                </a>
+
+
+                <!-- Cart -->
+                <a
+                    href="cart.html"
+                    class="cart-btn"
+                    aria-label="Shopping cart"
+                >
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <span
+                        class="cart-count"
+                        id="cartCount"
+                    >
+                        0
+                    </span>
+
+                </a>
+
+
+                <!-- Mobile Menu -->
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Open navigation"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==================================================
+         SIGN IN
+    =================================================== -->
+
+    <main class="auth-page">
+
+        <section class="auth-section">
+
+            <!-- Decorative background -->
+            <div class="auth-glow auth-glow-one"></div>
+
+            <div class="auth-glow auth-glow-two"></div>
+
+
+            <div class="container auth-container">
+
+
+                <!-- ======================================
+                     LEFT SIDE
+                ======================================= -->
+
+                <div class="auth-info">
+
+                    <a
+                        href="index.html"
+                        class="auth-back-link"
+                    >
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                        Back to UrbanBite
+                    </a>
+
+
+                    <span class="section-label">
+                        WELCOME BACK
+                    </span>
+
+
+                    <h1>
+                        Good Food Is
+                        <span>Waiting.</span>
+                    </h1>
+
+
+                    <p class="auth-description">
+                        Sign in to your UrbanBite account to
+                        order your favourite meals, manage
+                        your details and enjoy a faster
+                        checkout experience.
+                    </p>
+
+
+                    <!-- Benefits -->
+                    <div class="auth-benefits">
+
+                        <div class="auth-benefit">
+
+                            <div class="auth-benefit-icon">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                            </div>
+
+                            <div>
+                                <h3>
+                                    Faster Ordering
+                                </h3>
+
+                                <p>
+                                    Get your favourite meals
+                                    without entering your
+                                    details every time.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="auth-benefit">
+
+                            <div class="auth-benefit-icon">
+                                <i class="fa-solid fa-receipt"></i>
+                            </div>
+
+                            <div>
+                                <h3>
+                                    Order History
+                                </h3>
+
+                                <p>
+                                    Easily keep track of your
+                                    UrbanBite orders.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="auth-benefit">
+
+                            <div class="auth-benefit-icon">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+
+                            <div>
+                                <h3>
+                                    Save Favourites
+                                </h3>
+
+                                <p>
+                                    Keep the meals you love
+                                    ready for your next order.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ======================================
+                     RIGHT SIDE - FORM
+                ======================================= -->
+
+                <div class="auth-card">
+
+
+                    <!-- Card Header -->
+                    <div class="auth-card-header">
+
+                        <div class="auth-card-icon">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+
+
+                        <span class="section-label">
+                            YOUR ACCOUNT
+                        </span>
+
+
+                        <h2>
+                            Sign In
+                        </h2>
+
+
+                        <p>
+                            Enter your account details below.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- ==================================
+                         MESSAGE
+                    =================================== -->
+
+                    <div
+                        class="auth-message"
+                        id="authMessage"
+                        role="alert"
+                        hidden
+                    >
+                    </div>
+
+
+
+                    <!-- ==================================
+                         FORM
+                    =================================== -->
+
+                    <form
+                        class="auth-form"
+                        id="signinForm"
+                        novalidate
+                    >
+
+
+                        <!-- Email -->
+
+                        <div class="auth-form-group">
+
+                            <label for="signinEmail">
+                                Email Address
+                            </label>
+
+
+                            <div class="auth-input-box">
+
+                                <i class="fa-regular fa-envelope"></i>
+
+                                <input
+                                    type="email"
+                                    id="signinEmail"
+                                    name="email"
+                                    placeholder="you@example.com"
+                                    autocomplete="email"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <small
+                                class="auth-error"
+                                id="emailError"
+                            >
+                            </small>
+
+                        </div>
+
+
+
+                        <!-- Password -->
+
+                        <div class="auth-form-group">
+
+                            <div class="auth-label-row">
+
+                                <label for="signinPassword">
+                                    Password
+                                </label>
+
+
+                                <button
+                                    type="button"
+                                    class="forgot-password-btn"
+                                    id="forgotPasswordBtn"
+                                >
+                                    Forgot password?
+                                </button>
+
+                            </div>
+
+
+                            <div class="auth-input-box">
+
+                                <i class="fa-solid fa-lock"></i>
+
+                                <input
+                                    type="password"
+                                    id="signinPassword"
+                                    name="password"
+                                    placeholder="Enter your password"
+                                    autocomplete="current-password"
+                                    minlength="6"
+                                    required
+                                >
+
+
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    id="passwordToggle"
+                                    aria-label="Show password"
+                                >
+
+                                    <i class="fa-regular fa-eye"></i>
+
+                                </button>
+
+                            </div>
+
+
+                            <small
+                                class="auth-error"
+                                id="passwordError"
+                            >
+                            </small>
+
+                        </div>
+
+
+
+                        <!-- ==================================
+                             REMEMBER ME
+                        =================================== -->
+
+                        <div class="auth-options">
+
+                            <label class="remember-checkbox">
+
+                                <input
+                                    type="checkbox"
+                                    id="rememberMe"
+                                    name="rememberMe"
+                                >
+
+                                <span class="custom-checkbox">
+
+                                    <i class="fa-solid fa-check"></i>
+
+                                </span>
+
+                                <span>
+                                    Remember me
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+
+                        <!-- ==================================
+                             SIGN IN BUTTON
+                        =================================== -->
+
+                        <button
+                            type="submit"
+                            class="auth-submit-btn"
+                            id="signinBtn"
+                        >
+
+                            <span>
+                                Sign In
+                            </span>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+
+                    </form>
+
+
+
+                    <!-- ==================================
+                         DIVIDER
+                    =================================== -->
+
+                    <div class="auth-divider">
+
+                        <span></span>
+
+                        <p>
+                            New to UrbanBite?
+                        </p>
+
+                        <span></span>
+
+                    </div>
+
+
+
+                    <!-- ==================================
+                         CREATE ACCOUNT
+                    =================================== -->
+
+                    <a
+                        href="signup.html"
+                        class="auth-secondary-btn"
+                    >
+
+                        <i class="fa-regular fa-user"></i>
+
+                        Create an Account
+
+                    </a>
+
+
+
+                    <!-- ==================================
+                         SECURITY
+                    =================================== -->
+
+                    <div class="auth-security">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <p>
+                            Your account information is used
+                            only for this UrbanBite demo.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==================================================
+         FOOTER
+    =================================================== -->
+
+    <footer class="auth-footer">
+
+        <div class="container auth-footer-content">
+
+            <p>
+                &copy; 2026 UrbanBite.
+                All rights reserved.
+            </p>
+
+
+            <div class="auth-footer-links">
+
+                <a href="#">
+                    Privacy
+                </a>
+
+                <a href="#">
+                    Terms
+                </a>
+
+                <a href="index.html#contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ==================================================
+         FORGOT PASSWORD MODAL
+    =================================================== -->
+
+    <div
+        class="auth-modal"
+        id="forgotPasswordModal"
+        aria-hidden="true"
+    >
+
+        <div class="auth-modal-overlay"></div>
+
+
+        <div
+            class="auth-modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="forgotPasswordTitle"
+        >
+
+
+            <!-- Close -->
+
+            <button
+                type="button"
+                class="auth-modal-close"
+                id="closeForgotModal"
+                aria-label="Close"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+
+
+            <!-- Icon -->
+
+            <div class="auth-modal-icon">
+
+                <i class="fa-regular fa-envelope"></i>
+
+            </div>
+
+
+            <h2 id="forgotPasswordTitle">
+                Forgot Password?
+            </h2>
+
+
+            <p>
+                Enter your email address and we'll check
+                whether an UrbanBite demo account exists.
+            </p>
+
+
+
+            <!-- Reset Form -->
+
+            <form id="forgotPasswordForm">
+
+                <div class="auth-form-group">
+
+                    <label for="resetEmail">
+                        Email Address
+                    </label>
+
+
+                    <div class="auth-input-box">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="resetEmail"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="auth-submit-btn"
+                >
+
+                    <span>
+                        Continue
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </form>
+
+
+            <div
+                class="forgot-message"
+                id="forgotMessage"
+                hidden
+            >
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    =================================================== -->
+
+    <script src="signin.js"></script>
+
+</body>
+
+</html>

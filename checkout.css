@@ -1,0 +1,896 @@
+/* =========================================================
+   URBANBITE - CHECKOUT PAGE
+========================================================= */
+
+.checkout-page {
+    min-height: 100vh;
+    background: var(--dark);
+}
+
+/* =========================
+   CHECKOUT HERO
+========================= */
+
+.checkout-hero {
+    padding: 140px 0 55px;
+    background:
+        radial-gradient(
+            circle at 85% 30%,
+            rgba(255, 107, 0, 0.1),
+            transparent 30%
+        ),
+        #111111;
+    border-bottom: 1px solid var(--border);
+}
+
+.checkout-hero h1 {
+    margin-bottom: 12px;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    line-height: 1.1;
+}
+
+.checkout-hero p {
+    color: var(--gray);
+    max-width: 550px;
+}
+
+/* =========================
+   CHECKOUT LAYOUT
+========================= */
+
+.checkout-section {
+    padding: 70px 0 100px;
+}
+
+.checkout-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(340px, 0.8fr);
+    gap: 40px;
+    align-items: start;
+}
+
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* =========================
+   CHECKOUT CARDS
+========================= */
+
+.checkout-card {
+    padding: 30px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+}
+
+.checkout-card:hover {
+    border-color: rgba(255, 107, 0, 0.18);
+}
+
+.checkout-card-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--border);
+}
+
+.checkout-number {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 107, 0, 0.1);
+    color: var(--primary);
+    border: 1px solid rgba(255, 107, 0, 0.2);
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+.checkout-card-header h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+    margin-bottom: 3px;
+}
+
+.checkout-card-header p {
+    color: var(--gray);
+    font-size: 0.78rem;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    min-width: 0;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--gray-light);
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.form-group label span {
+    color: #777;
+    font-weight: 400;
+}
+
+.input-box {
+    position: relative;
+}
+
+.input-box > i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #777;
+    font-size: 0.85rem;
+    pointer-events: none;
+    transition: var(--transition);
+}
+
+.input-box input,
+.input-box select {
+    width: 100%;
+    height: 50px;
+    padding: 0 15px 0 43px;
+    background: #101010;
+    color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+    font-size: 0.85rem;
+    transition: var(--transition);
+}
+
+.input-box select {
+    cursor: pointer;
+}
+
+.input-box input::placeholder {
+    color: #666;
+}
+
+.input-box input:focus,
+.input-box select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.08);
+}
+
+.input-box:focus-within > i {
+    color: var(--primary);
+}
+
+.form-group textarea {
+    width: 100%;
+    min-height: 110px;
+    padding: 15px;
+    resize: vertical;
+    background: #101010;
+    color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+    line-height: 1.5;
+    transition: var(--transition);
+}
+
+.form-group textarea::placeholder {
+    color: #666;
+}
+
+/* =========================
+   DELIVERY OPTIONS
+========================= */
+
+.delivery-options,
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.delivery-option,
+.payment-option {
+    position: relative;
+    min-height: 85px;
+    padding: 16px 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #111;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.delivery-option:hover,
+.payment-option:hover {
+    background: #151515;
+    border-color: rgba(255, 107, 0, 0.3);
+}
+
+.delivery-option.active,
+.payment-option.active {
+    background: rgba(255, 107, 0, 0.05);
+    border-color: var(--primary);
+}
+
+.delivery-option input,
+.payment-option input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Custom radio */
+
+.delivery-radio,
+.payment-radio {
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+    position: relative;
+    border: 2px solid #555;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.delivery-option.active .delivery-radio,
+.payment-option.active .payment-radio {
+    border-color: var(--primary);
+}
+
+.delivery-option.active .delivery-radio::after,
+.payment-option.active .payment-radio::after {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    background: var(--primary);
+    border-radius: 50%;
+}
+
+/* Option icons */
+
+.delivery-option-icon,
+.payment-option-icon {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #222;
+    color: var(--primary);
+    border-radius: 11px;
+    font-size: 1rem;
+}
+
+.delivery-option-info,
+.payment-option-info {
+    min-width: 0;
+    flex: 1;
+}
+
+.delivery-option-info strong,
+.payment-option-info strong {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 0.88rem;
+}
+
+.delivery-option-info span,
+.payment-option-info span {
+    display: block;
+    color: var(--gray);
+    font-size: 0.72rem;
+}
+
+.delivery-price {
+    color: var(--white);
+    font-size: 0.85rem;
+}
+
+.delivery-price.free {
+    color: #53d88b;
+}
+
+/* =========================
+   PAYMENT
+========================= */
+
+.checkout-payment-icons {
+    display: flex;
+    gap: 7px;
+    color: #aaa;
+    font-size: 1.7rem;
+}
+
+.card-details {
+    margin-top: 20px;
+    padding: 22px;
+    background: #111;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+.payment-security {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
+    color: #777;
+    font-size: 0.7rem;
+}
+
+.payment-security i {
+    color: #53d88b;
+}
+
+/* =========================
+   CHECKOUT SUMMARY
+========================= */
+
+.checkout-summary {
+    position: sticky;
+    top: 110px;
+    padding: 28px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.checkout-summary-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.checkout-summary-header h2 {
+    margin-top: 3px;
+    font-family: "Playfair Display", serif;
+    font-size: 1.45rem;
+}
+
+.checkout-summary-header a {
+    color: var(--primary);
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.checkout-summary-header a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   CHECKOUT PRODUCTS
+========================= */
+
+.checkout-items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.checkout-product {
+    display: grid;
+    grid-template-columns: 65px 1fr auto;
+    gap: 12px;
+    align-items: center;
+}
+
+.checkout-product-image {
+    position: relative;
+    width: 65px;
+    height: 65px;
+}
+
+.checkout-product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.checkout-product-quantity {
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    min-width: 23px;
+    height: 23px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    color: white;
+    border: 2px solid var(--card);
+    border-radius: 50%;
+    font-size: 0.65rem;
+    font-weight: 700;
+}
+
+.checkout-product-info {
+    min-width: 0;
+}
+
+.checkout-product-info h3 {
+    overflow: hidden;
+    margin-bottom: 4px;
+    font-size: 0.82rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.checkout-product-info span {
+    color: var(--gray);
+    font-size: 0.68rem;
+}
+
+.checkout-product-price {
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+/* =========================
+   SUMMARY PRICES
+========================= */
+
+.checkout-summary-prices {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 24px 0;
+}
+
+.checkout-summary-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: var(--gray);
+    font-size: 0.84rem;
+}
+
+.checkout-summary-row strong {
+    color: var(--white);
+    font-weight: 600;
+}
+
+.checkout-discount {
+    color: #53d88b;
+}
+
+.checkout-discount strong {
+    color: #53d88b;
+}
+
+.checkout-divider {
+    height: 1px;
+    background: var(--border);
+}
+
+/* =========================
+   CHECKOUT TOTAL
+========================= */
+
+.checkout-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 24px 0;
+}
+
+.checkout-total span {
+    display: block;
+    font-weight: 700;
+}
+
+.checkout-total small {
+    display: block;
+    margin-top: 2px;
+    color: #777;
+    font-size: 0.67rem;
+}
+
+.checkout-total > strong {
+    color: var(--primary);
+    font-family: "Playfair Display", serif;
+    font-size: 1.7rem;
+}
+
+/* =========================
+   PLACE ORDER
+========================= */
+
+.place-order-btn {
+    width: 100%;
+    min-height: 56px;
+    padding: 0 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 100px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+    box-shadow: 0 12px 30px rgba(255, 107, 0, 0.2);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.place-order-btn:hover {
+    background: var(--primary-light);
+    transform: translateY(-3px);
+    box-shadow: 0 16px 35px rgba(255, 107, 0, 0.3);
+}
+
+.place-order-btn i {
+    transition: transform 0.3s ease;
+}
+
+.place-order-btn:hover i {
+    transform: translateX(5px);
+}
+
+.place-order-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.checkout-secure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 14px;
+    color: #777;
+    font-size: 0.7rem;
+}
+
+.checkout-secure i {
+    color: #53d88b;
+}
+
+.checkout-terms {
+    margin-top: 18px;
+    color: #666;
+    font-size: 0.65rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* =========================
+   SUCCESS MODAL
+========================= */
+
+.order-success-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 8000;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.35s ease;
+}
+
+.order-success-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.order-success-content {
+    width: min(470px, 100%);
+    padding: 45px 35px;
+    background: #191919;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+    transform: translateY(30px) scale(0.95);
+    transition: 0.35s ease;
+}
+
+.order-success-modal.active .order-success-content {
+    transform: translateY(0) scale(1);
+}
+
+.success-animation {
+    width: 85px;
+    height: 85px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(83, 216, 139, 0.1);
+    color: #53d88b;
+    border: 2px solid rgba(83, 216, 139, 0.25);
+    border-radius: 50%;
+    font-size: 2rem;
+}
+
+.order-success-modal.active .success-animation {
+    animation: successPop 0.6s ease;
+}
+
+@keyframes successPop {
+    0% {
+        transform: scale(0);
+    }
+
+    60% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.order-success-content h2 {
+    margin: 8px 0 12px;
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+}
+
+.order-success-content > p {
+    max-width: 380px;
+    margin: 0 auto;
+    color: var(--gray);
+    font-size: 0.84rem;
+    line-height: 1.7;
+}
+
+/* Order number */
+
+.order-number-box {
+    margin: 25px 0 12px;
+    padding: 16px;
+    background: #101010;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.order-number-box span {
+    display: block;
+    margin-bottom: 4px;
+    color: #777;
+    font-size: 0.68rem;
+}
+
+.order-number-box strong {
+    color: var(--primary);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+/* Delivery information */
+
+.success-delivery-info {
+    margin-bottom: 25px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: rgba(255, 107, 0, 0.06);
+    border-radius: 12px;
+}
+
+.success-delivery-info > i {
+    color: var(--primary);
+    font-size: 1.3rem;
+}
+
+.success-delivery-info span,
+.success-delivery-info strong {
+    display: block;
+    text-align: left;
+}
+
+.success-delivery-info span {
+    color: var(--gray);
+    font-size: 0.66rem;
+}
+
+.success-delivery-info strong {
+    margin-top: 2px;
+    font-size: 0.82rem;
+}
+
+/* =========================
+   VALIDATION
+========================= */
+
+.input-box.error input,
+.input-box.error select,
+.form-group textarea.error {
+    border-color: #ff5d5d;
+}
+
+.input-box.valid input,
+.input-box.valid select {
+    border-color: #53d88b;
+}
+
+.form-error {
+    display: block;
+    margin-top: 6px;
+    color: #ff6868;
+    font-size: 0.67rem;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .checkout-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .checkout-summary {
+        position: static;
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .checkout-hero {
+        padding: 120px 0 45px;
+    }
+
+    .checkout-hero h1 {
+        font-size: 2.7rem;
+    }
+
+    .checkout-section {
+        padding: 50px 0 70px;
+    }
+
+    .checkout-card {
+        padding: 22px 18px;
+    }
+
+    .checkout-card-header {
+        align-items: flex-start;
+    }
+
+    .checkout-number {
+        width: 40px;
+        height: 40px;
+    }
+
+    .checkout-card-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full-width {
+        grid-column: auto;
+    }
+
+    .delivery-option,
+    .payment-option {
+        padding: 14px;
+    }
+
+    .delivery-option-icon,
+    .payment-option-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .delivery-option-info span,
+    .payment-option-info span {
+        font-size: 0.65rem;
+    }
+
+    .checkout-payment-icons {
+        display: none;
+    }
+
+    .card-details {
+        padding: 18px 14px;
+    }
+
+    .checkout-summary {
+        padding: 22px;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .delivery-option,
+    .payment-option {
+        gap: 10px;
+    }
+
+    .delivery-radio,
+    .payment-radio {
+        width: 17px;
+        height: 17px;
+    }
+
+    .delivery-option-icon,
+    .payment-option-icon {
+        display: none;
+    }
+
+    .delivery-price {
+        font-size: 0.75rem;
+    }
+
+    .checkout-product {
+        grid-template-columns: 55px 1fr auto;
+    }
+
+    .checkout-product-image {
+        width: 55px;
+        height: 55px;
+    }
+
+    .order-success-content {
+        padding: 35px 20px;
+    }
+
+    .order-success-content h2 {
+        font-size: 1.7rem;
+    }
+}

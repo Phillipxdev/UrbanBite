@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Account | UrbanBite</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Account CSS -->
+    <link rel="stylesheet" href="account.css">
+</head>
+
+
+<body>
+
+    <!-- ==================================================
+         HEADER
+    =================================================== -->
+
+    <header class="header">
+
+        <div class="container navbar">
+
+            <a href="index.html" class="logo">
+                Urban<span>Bite.</span>
+            </a>
+
+
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="index.html" class="nav-link">
+                    Home
+                </a>
+
+                <a href="menu.html" class="nav-link">
+                    Menu
+                </a>
+
+                <a href="index.html#about" class="nav-link">
+                    About
+                </a>
+
+                <a href="index.html#offers" class="nav-link">
+                    Offers
+                </a>
+
+                <a href="index.html#contact" class="nav-link">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <div class="nav-actions">
+
+                <a
+                    href="account.html"
+                    class="nav-icon account-active"
+                    aria-label="My Account"
+                >
+                    <i class="fa-solid fa-user"></i>
+                </a>
+
+
+                <a
+                    href="cart.html"
+                    class="cart-btn"
+                    aria-label="Shopping cart"
+                >
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <span
+                        class="cart-count"
+                        id="cartCount"
+                    >
+                        0
+                    </span>
+                </a>
+
+
+                <button
+                    type="button"
+                    class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open navigation"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==================================================
+         ACCOUNT HERO
+    =================================================== -->
+
+    <main class="account-page">
+
+        <section class="account-hero">
+
+            <div class="account-hero-glow"></div>
+
+            <div class="container">
+
+                <div class="account-breadcrumb">
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                    <span>
+                        My Account
+                    </span>
+
+                </div>
+
+
+                <div class="account-hero-content">
+
+                    <div>
+
+                        <span class="section-label">
+                            YOUR URBANBITE
+                        </span>
+
+                        <h1>
+                            My
+                            <span>Account.</span>
+                        </h1>
+
+                        <p>
+                            Manage your profile, orders and
+                            favourite UrbanBite meals.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="menu.html"
+                        class="account-order-btn"
+                    >
+                        <i class="fa-solid fa-utensils"></i>
+
+                        Order Food
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             ACCOUNT CONTENT
+        =================================================== -->
+
+        <section class="account-section">
+
+            <div class="container account-layout">
+
+
+                <!-- ==================================================
+                     SIDEBAR
+                =================================================== -->
+
+                <aside class="account-sidebar">
+
+
+                    <!-- USER CARD -->
+
+                    <div class="account-user-card">
+
+                        <div class="account-avatar">
+
+                            <span id="accountInitials">
+                                UB
+                            </span>
+
+                        </div>
+
+
+                        <div class="account-user-info">
+
+                            <span>
+                                Welcome back
+                            </span>
+
+                            <h2 id="accountUserName">
+                                UrbanBite Customer
+                            </h2>
+
+                            <p id="accountUserEmail">
+                                customer@email.com
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- NAVIGATION -->
+
+                    <nav class="account-menu">
+
+                        <button
+                            type="button"
+                            class="account-menu-item active"
+                            data-account-tab="overview"
+                        >
+                            <i class="fa-solid fa-table-columns"></i>
+
+                            <span>
+                                Overview
+                            </span>
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="account-menu-item"
+                            data-account-tab="profile"
+                        >
+                            <i class="fa-regular fa-user"></i>
+
+                            <span>
+                                My Profile
+                            </span>
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="account-menu-item"
+                            data-account-tab="orders"
+                        >
+                            <i class="fa-solid fa-receipt"></i>
+
+                            <span>
+                                My Orders
+                            </span>
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="account-menu-item"
+                            data-account-tab="favorites"
+                        >
+                            <i class="fa-regular fa-heart"></i>
+
+                            <span>
+                                Favourites
+                            </span>
+                        </button>
+
+                        <a                     
+                            href="admin.html"
+                            class="account-menu-item admin-menu-item"
+                            id="adminPanelBtn"
+                            style="display: none;"
+                         >
+                         <i class="fa-solid fa-user-shield"></i>
+
+                         <span>               
+                            Admin Panel
+                         </span>
+                         </a>
+
+
+                        <div class="account-menu-divider"></div>
+
+
+                        <button
+                            type="button"
+                            class="account-menu-item account-signout"
+                            id="accountSignOutBtn"
+                        >
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+                            <span>
+                                Sign Out
+                            </span>
+                        </button>
+
+                    </nav>
+
+                </aside>
+
+
+
+                <!-- ==================================================
+                     MAIN CONTENT
+                =================================================== -->
+
+                <div class="account-content">
+
+
+                    <!-- ==================================================
+                         OVERVIEW
+                    =================================================== -->
+
+                    <section
+                        class="account-panel active"
+                        id="overviewPanel"
+                        data-panel="overview"
+                    >
+
+                        <div class="account-panel-heading">
+
+                            <div>
+
+                                <span class="section-label">
+                                    DASHBOARD
+                                </span>
+
+                                <h2>
+                                    Welcome,
+                                    <span id="overviewFirstName">
+                                        Customer
+                                    </span>
+                                </h2>
+
+                                <p>
+                                    Here's what's happening with
+                                    your UrbanBite account.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- STATS -->
+
+                        <div class="account-stats">
+
+
+                            <div class="account-stat-card">
+
+                                <div class="account-stat-icon">
+                                    <i class="fa-solid fa-receipt"></i>
+                                </div>
+
+                                <div>
+
+                                    <strong id="totalOrders">
+                                        0
+                                    </strong>
+
+                                    <span>
+                                        Total Orders
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="account-stat-card">
+
+                                <div class="account-stat-icon">
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
+
+                                <div>
+
+                                    <strong id="totalFavorites">
+                                        0
+                                    </strong>
+
+                                    <span>
+                                        Favourites
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="account-stat-card">
+
+                                <div class="account-stat-icon">
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                </div>
+
+                                <div>
+
+                                    <strong id="accountCartItems">
+                                        0
+                                    </strong>
+
+                                    <span>
+                                        Cart Items
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- QUICK ACTIONS -->
+
+                        <div class="account-card">
+
+                            <div class="account-card-heading">
+
+                                <div>
+
+                                    <h3>
+                                        Quick Actions
+                                    </h3>
+
+                                    <p>
+                                        Everything you need,
+                                        just one click away.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="quick-actions">
+
+
+                                <a
+                                    href="menu.html"
+                                    class="quick-action"
+                                >
+
+                                    <div class="quick-action-icon">
+                                        <i class="fa-solid fa-utensils"></i>
+                                    </div>
+
+                                    <div>
+                                        <strong>
+                                            Browse Menu
+                                        </strong>
+
+                                        <span>
+                                            Find your next meal
+                                        </span>
+                                    </div>
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </a>
+
+
+
+                                <button
+                                    type="button"
+                                    class="quick-action"
+                                    data-open-tab="orders"
+                                >
+
+                                    <div class="quick-action-icon">
+                                        <i class="fa-solid fa-receipt"></i>
+                                    </div>
+
+                                    <div>
+                                        <strong>
+                                            My Orders
+                                        </strong>
+
+                                        <span>
+                                            View recent orders
+                                        </span>
+                                    </div>
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </button>
+
+
+
+                                <button
+                                    type="button"
+                                    class="quick-action"
+                                    data-open-tab="favorites"
+                                >
+
+                                    <div class="quick-action-icon">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </div>
+
+                                    <div>
+                                        <strong>
+                                            Favourites
+                                        </strong>
+
+                                        <span>
+                                            View saved meals
+                                        </span>
+                                    </div>
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </button>
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- RECENT ORDER -->
+
+                        <div class="account-card">
+
+                            <div class="account-card-heading">
+
+                                <div>
+
+                                    <h3>
+                                        Recent Order
+                                    </h3>
+
+                                    <p>
+                                        Your latest UrbanBite order.
+                                    </p>
+
+                                </div>
+
+
+                                <button
+                                    type="button"
+                                    class="account-text-btn"
+                                    data-open-tab="orders"
+                                >
+                                    View Orders
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+
+                            </div>
+
+
+                            <div
+                                class="recent-order-container"
+                                id="recentOrderContainer"
+                            >
+                                <!-- Added by account.js -->
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- ==================================================
+                         PROFILE
+                    =================================================== -->
+
+                    <section
+                        class="account-panel"
+                        id="profilePanel"
+                        data-panel="profile"
+                    >
+
+                        <div class="account-panel-heading">
+
+                            <div>
+
+                                <span class="section-label">
+                                    PERSONAL DETAILS
+                                </span>
+
+                                <h2>
+                                    My Profile
+                                </h2>
+
+                                <p>
+                                    Update your UrbanBite
+                                    account information.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="account-card">
+
+                            <form
+                                class="profile-form"
+                                id="profileForm"
+                            >
+
+
+                                <div class="profile-form-grid">
+
+
+                                    <!-- FIRST NAME -->
+
+                                    <div class="profile-form-group">
+
+                                        <label for="profileFirstName">
+                                            First Name
+                                        </label>
+
+                                        <div class="profile-input">
+
+                                            <i class="fa-regular fa-user"></i>
+
+                                            <input
+                                                type="text"
+                                                id="profileFirstName"
+                                                required
+                                            >
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- LAST NAME -->
+
+                                    <div class="profile-form-group">
+
+                                        <label for="profileLastName">
+                                            Last Name
+                                        </label>
+
+                                        <div class="profile-input">
+
+                                            <i class="fa-regular fa-user"></i>
+
+                                            <input
+                                                type="text"
+                                                id="profileLastName"
+                                                required
+                                            >
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- EMAIL -->
+
+                                    <div class="profile-form-group">
+
+                                        <label for="profileEmail">
+                                            Email Address
+                                        </label>
+
+                                        <div class="profile-input">
+
+                                            <i class="fa-regular fa-envelope"></i>
+
+                                            <input
+                                                type="email"
+                                                id="profileEmail"
+                                                required
+                                            >
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- PHONE -->
+
+                                    <div class="profile-form-group">
+
+                                        <label for="profilePhone">
+                                            Phone Number
+                                        </label>
+
+                                        <div class="profile-input">
+
+                                            <i class="fa-solid fa-phone"></i>
+
+                                            <input
+                                                type="tel"
+                                                id="profilePhone"
+                                            >
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div
+                                    class="profile-message"
+                                    id="profileMessage"
+                                    hidden
+                                ></div>
+
+
+                                <button
+                                    type="submit"
+                                    class="save-profile-btn"
+                                >
+                                    <i class="fa-regular fa-floppy-disk"></i>
+
+                                    Save Changes
+                                </button>
+
+                            </form>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- ==================================================
+                         ORDERS
+                    =================================================== -->
+
+                    <section
+                        class="account-panel"
+                        id="ordersPanel"
+                        data-panel="orders"
+                    >
+
+                        <div class="account-panel-heading">
+
+                            <div>
+
+                                <span class="section-label">
+                                    ORDER HISTORY
+                                </span>
+
+                                <h2>
+                                    My Orders
+                                </h2>
+
+                                <p>
+                                    View your UrbanBite
+                                    order history.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="orders-list"
+                            id="ordersList"
+                        >
+                            <!-- Generated with JS -->
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- ==================================================
+                         FAVORITES
+                    =================================================== -->
+
+                    <section
+                        class="account-panel"
+                        id="favoritesPanel"
+                        data-panel="favorites"
+                    >
+
+                        <div class="account-panel-heading">
+
+                            <div>
+
+                                <span class="section-label">
+                                    SAVED MEALS
+                                </span>
+
+                                <h2>
+                                    My Favourites
+                                </h2>
+
+                                <p>
+                                    Meals you've saved
+                                    for later.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="account-favorites"
+                            id="accountFavorites"
+                        >
+                            <!-- Generated with JS -->
+                        </div>
+
+                    </section>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==================================================
+         SIGN OUT MODAL
+    =================================================== -->
+
+    <div
+        class="account-modal"
+        id="signOutModal"
+        aria-hidden="true"
+    >
+
+        <div class="account-modal-overlay"></div>
+
+
+        <div class="account-modal-content">
+
+            <div class="account-modal-icon">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </div>
+
+
+            <h2>
+                Sign Out?
+            </h2>
+
+
+            <p>
+                Are you sure you want to sign out
+                of your UrbanBite account?
+            </p>
+
+
+            <div class="account-modal-actions">
+
+                <button
+                    type="button"
+                    class="modal-cancel-btn"
+                    id="cancelSignOutBtn"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    type="button"
+                    class="modal-signout-btn"
+                    id="confirmSignOutBtn"
+                >
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+                    Sign Out
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         FOOTER
+    =================================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; 2026 UrbanBite.
+                    All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    =================================================== -->
+
+    <script src="account.js"></script>
+
+</body>
+
+</html>

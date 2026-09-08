@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Products | UrbanBite Admin</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="admin.css">
+
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+
+    <aside class="sidebar">
+
+        <a href="admin.html" class="admin-logo">
+            Urban<span>Bite.</span>
+        </a>
+
+        <p class="sidebar-label">
+            ADMIN PANEL
+        </p>
+
+        <nav class="admin-nav">
+
+            <a href="admin.html">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                Dashboard
+
+            </a>
+
+
+            <a
+                href="admin-products.html"
+                class="active"
+            >
+
+                <i class="fa-solid fa-burger"></i>
+
+                Products
+
+            </a>
+
+
+            <a href="#">
+
+                <i class="fa-solid fa-receipt"></i>
+
+                Orders
+
+            </a>
+
+
+            <a href="#">
+
+                <i class="fa-solid fa-users"></i>
+
+                Customers
+
+            </a>
+
+
+            <a href="index.html">
+
+                <i class="fa-solid fa-store"></i>
+
+                View Store
+
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <main class="admin-main">
+
+
+        <header class="admin-header">
+
+            <div>
+
+                <p>PRODUCT MANAGEMENT</p>
+
+                <h1>Products</h1>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="primary-btn"
+                id="addProductBtn"
+            >
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Product
+
+            </button>
+
+        </header>
+
+
+        <!-- PRODUCT STATISTICS -->
+
+        <section class="dashboard-cards">
+
+            <div class="dashboard-card">
+
+                <span>Total Products</span>
+
+                <strong id="totalProducts">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <span>Burgers</span>
+
+                <strong id="burgerProducts">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <span>Drinks</span>
+
+                <strong id="drinkProducts">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <span>Desserts</span>
+
+                <strong id="dessertProducts">
+                    0
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- SEARCH -->
+
+        <section class="product-toolbar">
+
+            <div class="admin-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="search"
+                    id="productSearch"
+                    placeholder="Search products..."
+                >
+
+            </div>
+
+
+            <select id="categoryFilter">
+
+                <option value="all">
+                    All Categories
+                </option>
+
+                <option value="burger">
+                    Burgers
+                </option>
+
+                <option value="pizza">
+                    Pizza
+                </option>
+
+                <option value="chicken">
+                    Chicken
+                </option>
+
+                <option value="drinks">
+                    Drinks
+                </option>
+
+                <option value="dessert">
+                    Desserts
+                </option>
+
+            </select>
+
+        </section>
+
+
+        <!-- PRODUCTS TABLE -->
+
+        <section class="admin-table-card">
+
+            <div class="table-responsive">
+
+                <table>
+
+                    <thead>
+
+                    <tr>
+
+                        <th>Product</th>
+
+                        <th>Category</th>
+
+                        <th>Price</th>
+
+                        <th>Rating</th>
+
+                        <th>Actions</th>
+
+                    </tr>
+
+                    </thead>
+
+
+                    <tbody id="productsTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- ========================================
+     ADD / EDIT PRODUCT
+========================================= -->
+
+<div
+    class="admin-modal"
+    id="productModal"
+>
+
+    <div class="modal-backdrop"></div>
+
+
+    <div class="admin-modal-content">
+
+        <div class="modal-header">
+
+            <div>
+
+                <span>PRODUCT</span>
+
+                <h2 id="productModalTitle">
+                    Add Product
+                </h2>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="modal-close"
+                id="closeProductModal"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <form id="productForm">
+
+
+            <input
+                type="hidden"
+                id="productId"
+            >
+
+
+            <div class="form-group">
+
+                <label for="productName">
+                    Product Name
+                </label>
+
+                <input
+                    type="text"
+                    id="productName"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="productDescription">
+                    Description
+                </label>
+
+                <textarea
+                    id="productDescription"
+                    rows="4"
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label for="productPrice">
+                        Price
+                    </label>
+
+                    <input
+                        type="number"
+                        id="productPrice"
+                        min="0"
+                        step="0.01"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="productCategory">
+                        Category
+                    </label>
+
+                    <select
+                        id="productCategory"
+                        required
+                    >
+
+                        <option value="">
+                            Select category
+                        </option>
+
+                        <option value="burger">
+                            Burger
+                        </option>
+
+                        <option value="pizza">
+                            Pizza
+                        </option>
+
+                        <option value="chicken">
+                            Chicken
+                        </option>
+
+                        <option value="drinks">
+                            Drinks
+                        </option>
+
+                        <option value="dessert">
+                            Dessert
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label for="productImage">
+                        Image
+                    </label>
+
+                    <input
+                        type="text"
+                        id="productImage"
+                        placeholder="burger.jpg"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="productRating">
+                        Rating
+                    </label>
+
+                    <input
+                        type="number"
+                        id="productRating"
+                        min="0"
+                        max="5"
+                        step="0.1"
+                        value="4.5"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="primary-btn full-btn"
+            >
+
+                <i class="fa-solid fa-floppy-disk"></i>
+
+                Save Product
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- DELETE MODAL -->
+
+<div
+    class="admin-modal"
+    id="deleteModal"
+>
+
+    <div class="modal-backdrop"></div>
+
+
+    <div class="delete-modal-content">
+
+        <div class="delete-modal-icon">
+
+            <i class="fa-solid fa-trash"></i>
+
+        </div>
+
+
+        <h2>
+            Delete Product?
+        </h2>
+
+
+        <p>
+            Are you sure you want to delete
+            <strong id="deleteProductName">
+                this product
+            </strong>?
+        </p>
+
+
+        <div class="modal-actions">
+
+            <button
+                type="button"
+                class="secondary-btn"
+                id="cancelDelete"
+            >
+                Cancel
+            </button>
+
+
+            <button
+                type="button"
+                class="danger-btn"
+                id="confirmDelete"
+            >
+                Delete Product
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="admin-products.js"></script>
+
+</body>
+</html>
