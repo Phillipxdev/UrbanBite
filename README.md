@@ -27,7 +27,7 @@ The project demonstrates practical Front-End Development skills including respon
 - Customer management
 - Store navigation
 - Responsive admin layout
-- 
+  
 - ## 🔐 Demo Admin Login
 
 To explore the UrbanBite Admin Dashboard, use the following demo credentials:
@@ -104,3 +104,8 @@ Durban, KwaZulu-Natal, South Africa
 
 ### Skills
 HTML5 • CSS3 • JavaScript • Responsive Web Design • Mobile-First Development • DOM Manipulation • Git • GitHub
+
+## 🌐 Live Demo
+
+🚀 View the live website:
+https://phillipxdev.github.io/UrbanBite/
